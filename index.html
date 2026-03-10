@@ -694,8 +694,58 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .realm-scroll::-webkit-scrollbar { width:4px; }
 .realm-scroll::-webkit-scrollbar-thumb { background:rgba(61,42,94,0.12); border-radius:2px; }
 
-/* Irregular realm card — blob shape via clip-path + border-radius */
-.realm-card {
+/* ── 普通关卡：横排行式 ── */
+.realm-row {
+  width:100%; height:72px;
+  display:flex; align-items:center; gap:10px;
+  padding:0 14px 0 10px;
+  border:3px solid var(--outline);
+  border-radius:18px;
+  box-shadow:4px 4px 0 var(--outline);
+  position:relative; overflow:hidden;
+  transition:transform 0.15s, box-shadow 0.15s;
+  box-sizing:border-box;
+}
+.realm-card:not(.locked) .realm-row:active {
+  transform:translate(2px,2px); box-shadow:2px 2px 0 var(--outline);
+}
+.realm-row-num {
+  font-family:var(--font-num); font-size:15px; font-weight:900;
+  color:var(--c-purple); flex-shrink:0; width:20px; text-align:center;
+  opacity:0.6;
+}
+.realm-row-monster {
+  font-size:36px; line-height:1; flex-shrink:0;
+  filter:drop-shadow(2px 3px 0 rgba(61,42,94,0.2));
+}
+.realm-row-info {
+  flex:1; min-width:0;
+}
+.realm-row-name {
+  font-family:var(--font-title); font-size:16px;
+  color:var(--c-text); -webkit-text-stroke:0.5px var(--outline);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.realm-row-action { flex-shrink:0; }
+.realm-lock-inline { font-size:22px; opacity:0.7; }
+.realm-beaten-row {
+  display:flex; align-items:center; gap:6px; flex-shrink:0;
+}
+
+/* ── BOSS关卡：全宽大卡 ── */
+.realm-boss-card { margin-top:6px; }
+.realm-blob-boss {
+  width:100%; min-height:180px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:20px 16px 64px;
+  position:relative; overflow:hidden;
+  border:4px solid var(--outline);
+  box-shadow:6px 6px 0 var(--outline);
+  transition:transform 0.15s, box-shadow 0.15s;
+}
+.realm-card:not(.locked) .realm-blob-boss:active {
+  transform:translate(3px,3px); box-shadow:3px 3px 0 var(--outline);
+}
   position:relative;
   margin-bottom:14px;
   cursor:pointer;
@@ -2629,50 +2679,65 @@ const REALM_MONSTERS = ['🔥🐉','🧊🐧','🌿👾','🌊🐙','⚡🦁','�
 function renderAdventure() {
   const scroll = document.getElementById('realm-scroll');
   scroll.innerHTML = '';
-  // Two-column grid layout
   const grid = document.createElement('div');
-  grid.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:12px;';
+  grid.style.cssText = 'display:flex;flex-direction:column;gap:10px;width:100%;';
   scroll.appendChild(grid);
 
   REALMS.forEach((realm, i) => {
     const beaten = STATE.realmProgress[realm.id] === 'beaten';
     const locked = i > 0 && STATE.realmProgress[REALMS[i-1].id] !== 'beaten';
     const monster = REALM_MONSTERS[i] || realm.icon;
-    const shape = BLOB_SHAPES[i % BLOB_SHAPES.length];
 
     const div = document.createElement('div');
-    div.className = 'realm-card' + (locked ? ' locked' : '') + (beaten ? ' beaten-card' : '');
-    div.style.cssText = `--delay:${i * 0.06}s;`;
+    div.className = 'realm-card' + (locked ? ' locked' : '') + (beaten ? ' beaten-card' : '') + (realm.isHell ? ' realm-boss-card' : '');
+    div.style.cssText = `--delay:${i * 0.05}s;margin-bottom:0;`;
 
-    // Hell tower spans full width
     if (realm.isHell) {
-      div.style.gridColumn = '1 / -1';
+      // BOSS card — tall centered layout
+      div.innerHTML = `
+        <div class="realm-blob realm-blob-boss" style="background:${realm.grad};border-radius:20px">
+          <div class="realm-hell-tag">👑 最终决战</div>
+          <div class="realm-card-monster" style="font-size:72px">${monster}</div>
+          <div class="realm-card-name" style="font-size:22px">${realm.name}</div>
+          ${locked
+            ? `<div class="realm-lock-overlay">🔒</div>`
+            : beaten
+              ? `<div class="realm-beaten-overlay" style="pointer-events:none">
+                  <span class="realm-beaten-icon">✅</span>
+                  <div class="realm-beaten-label">已击败</div>
+                 </div>
+                 <button class="realm-challenge-btn realm-rechallenge-btn" onclick="event.stopPropagation();startRealm(window._REALMS[${i}])">🔄 再战</button>`
+              : `<button class="realm-challenge-btn" onclick="event.stopPropagation();startRealm(window._REALMS[${i}])">⚔️ 挑战</button>`
+          }
+        </div>
+      `;
+    } else {
+      // Normal card — single row horizontal layout
+      div.innerHTML = `
+        <div class="realm-row" style="background:${realm.grad}">
+          <div class="realm-row-num">${i + 1}</div>
+          <div class="realm-row-monster">${monster}</div>
+          <div class="realm-row-info">
+            <div class="realm-row-name">${realm.name}</div>
+          </div>
+          ${locked
+            ? `<div class="realm-row-action realm-lock-inline">🔒</div>`
+            : beaten
+              ? `<div class="realm-beaten-row">
+                  <span style="font-size:20px">✅</span>
+                  <button class="realm-challenge-btn realm-rechallenge-btn" style="position:relative;transform:none;bottom:auto;left:auto;font-size:12px;padding:5px 14px" onclick="event.stopPropagation();startRealm(window._REALMS[${i}])">🔄 再战</button>
+                 </div>`
+              : `<button class="realm-challenge-btn" style="position:relative;transform:none;bottom:auto;left:auto;font-size:12px;padding:5px 14px" onclick="event.stopPropagation();startRealm(window._REALMS[${i}])">⚔️ 挑战</button>`
+          }
+        </div>
+      `;
     }
-
-    div.innerHTML = `
-      <div class="realm-blob" style="background:${realm.grad};border-radius:${shape}">
-        ${realm.isHell ? `<div class="realm-hell-tag">⚔️ 最终决战</div>` : ''}
-        <div class="realm-card-monster">${monster}</div>
-        <div class="realm-card-name">${realm.name}</div>
-        ${locked
-          ? `<div class="realm-lock-overlay">🔒</div>`
-          : beaten
-            ? `<div class="realm-beaten-overlay" style="pointer-events:none">
-                <span class="realm-beaten-icon">✅</span>
-                <div class="realm-beaten-label">已击败</div>
-               </div>
-               <button class="realm-challenge-btn realm-rechallenge-btn" onclick="event.stopPropagation();startRealm(window._REALMS[${i}])">🔄 再战</button>`
-            : `<button class="realm-challenge-btn" onclick="event.stopPropagation();startRealm(window._REALMS[${i}])">⚔️ 挑战</button>`
-        }
-      </div>
-    `;
 
     if (!locked) {
       div.onclick = () => startRealm(realm);
     }
     grid.appendChild(div);
   });
-  // expose realms globally for inline onclick
   window._REALMS = REALMS;
 }
 
