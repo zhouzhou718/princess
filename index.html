@@ -202,7 +202,19 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 }
 .comic-text .em { color: var(--c-pink); font-weight:bold; }
 
-.start-btn {
+@keyframes comicCardPop {
+  from { opacity:0; transform:scale(0.75) rotate(-4deg); }
+  to   { opacity:1; transform:scale(1) rotate(0deg); }
+}
+.intro-tap-hint {
+  font-size:15px; color:rgba(61,42,94,0.5);
+  animation:tapHintBob 1.8s ease-in-out infinite;
+}
+@keyframes tapHintBob {
+  0%,100%{transform:translateY(0);opacity:0.5;}
+  50%{transform:translateY(-5px);opacity:1;}
+}
+
   flex-shrink:0;
   margin-top:8px;
   padding:13px 44px;
@@ -220,6 +232,25 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   to   { transform:scale(1.04) rotate(1deg); box-shadow:6px 6px 0 #7a2ab5; }
 }
 .start-btn:active { transform:scale(0.96) translate(3px,3px); box-shadow:1px 1px 0 #7a2ab5; }
+
+.story-btn {
+  width:80%; margin-top:16px;
+  padding:16px 0;
+  background:linear-gradient(160deg,#3ab0ff,#c85af5);
+  border:3px solid var(--outline);
+  border-radius:var(--r-pill);
+  font-family:var(--font-title);
+  font-size:clamp(18px,5vw,22px);
+  color:#fff; letter-spacing:2px;
+  box-shadow:5px 5px 0 var(--outline), 0 0 24px rgba(58,176,255,0.4);
+  transition:all 0.15s cubic-bezier(.34,1.56,.64,1);
+  animation:storyBtnPop 2s ease-in-out infinite alternate;
+}
+@keyframes storyBtnPop {
+  from { transform:scale(1) rotate(0.5deg); box-shadow:5px 5px 0 var(--outline); }
+  to   { transform:scale(1.03) rotate(-0.5deg); box-shadow:7px 7px 0 #2a1a5e; }
+}
+.story-btn:active { transform:scale(0.96) translate(3px,3px); box-shadow:2px 2px 0 var(--outline); }
 
 /* ============================================================
    INTRO — sequential comic modals
@@ -1587,26 +1618,61 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 ================================================ -->
 <div id="screen-intro" class="screen active">
   <div class="intro-title" style="margin-bottom:18px">满满公主<br>独角兽拯救记</div>
-  <div class="comic-grid">
-    <div class="comic-panel" data-num="①" style="--delay:0.05s">
-      <span class="comic-scene">👸</span>
-      <div class="comic-text">水晶王国的公主<span class="em">满满</span>，<br>有一只神圣的独角兽，<br>是她最好的伙伴……</div>
-    </div>
-    <div class="comic-panel" data-num="②" style="--delay:0.15s">
-      <span class="comic-scene">🐉</span>
-      <div class="comic-text"><span class="em">地狱三角犬</span>突然降临！<br>它抢走了独角兽，<br>关进了黑暗地狱之塔！</div>
-    </div>
-    <div class="comic-panel" data-num="③" style="--delay:0.25s">
-      <span class="comic-scene">🗺️</span>
-      <div class="comic-text">通往地狱之塔的路上，<br>有<span class="em">十个秘境</span>，<br>被怪物们守护着……</div>
-    </div>
-    <div class="comic-panel" data-num="④" style="--delay:0.35s">
-      <span class="comic-scene">⚔️</span>
-      <div class="comic-text">满满公主拿起水晶剑，<br>踏上<span class="em">拯救独角兽</span><br>的冒险之旅！</div>
-    </div>
-  </div>
-  <button class="start-btn" style="margin-top:18px" onclick="startGame()">✨ 开始冒险</button>
+  <button class="start-btn" onclick="startGame()">✨ 开始冒险！</button>
+  <button class="story-btn" onclick="showComicPanel(0)">📖 查看故事</button>
 </div>
+
+<!-- 漫画弹出面板 (逐个显示) -->
+<div id="comic-overlay" style="
+  position:fixed;inset:0;z-index:500;
+  display:none;align-items:center;justify-content:center;
+  background:rgba(20,8,40,0.82);
+  padding:20px;box-sizing:border-box;
+">
+  <div id="comic-card" style="
+    width:100%;max-width:360px;
+    border:4px solid var(--outline);
+    border-radius:28px;
+    padding:28px 22px 22px;
+    position:relative;
+    box-shadow:6px 6px 0 var(--outline);
+    display:flex;flex-direction:column;align-items:center;
+    animation:comicCardPop 0.45s cubic-bezier(.34,1.56,.64,1) both;
+  ">
+    <!-- 角落编号 -->
+    <div id="comic-num" style="
+      position:absolute;top:12px;left:16px;
+      font-family:var(--font-num);font-size:18px;font-weight:900;
+      color:var(--c-purple);
+    "></div>
+    <!-- 进度点 -->
+    <div id="comic-dots" style="
+      position:absolute;top:14px;right:14px;
+      display:flex;gap:5px;
+    "></div>
+    <!-- 场景 emoji -->
+    <div id="comic-scene" style="
+      font-size:80px;line-height:1;margin:10px 0 16px;
+      animation:comicFloat 2.5s ease-in-out infinite;
+    "></div>
+    <!-- 文字 -->
+    <div id="comic-body" style="
+      font-size:16px;line-height:1.8;text-align:center;
+      color:var(--c-text);margin-bottom:22px;
+    "></div>
+    <!-- 按钮 -->
+    <button id="comic-next-btn" style="
+      padding:12px 40px;
+      background:linear-gradient(160deg,#ff5fa0,#c85af5);
+      border:3px solid var(--outline);
+      border-radius:var(--r-pill);
+      color:#fff;font-size:16px;font-weight:bold;letter-spacing:2px;
+      box-shadow:3px 3px 0 var(--outline);
+      transition:transform 0.12s;
+    " onclick="nextComicPanel()"></button>
+  </div>
+</div>
+
 
 <!-- ================================================
      SCREEN: MAIN
@@ -2686,86 +2752,75 @@ function closeBeatenAlert() {
 /* ============================================================
    INTRO — sequential comic modals
 ============================================================ */
+
+/* ─── 漫画逐格弹出 ─── */
 const COMIC_PANELS = [
-  { num:'①', scene:'👸', bg:'#fffbe8', border:'#f5a623', sh:'#c88a00',
-    text:'水晶王国的小公主<em>满满</em>拥有一只神圣的独角兽，是她最好的伙伴……' },
-  { num:'②', scene:'🐉', bg:'#fff0f5', border:'#ff5fa0', sh:'#c2336e',
-    text:'<em>地狱三角犬</em>突然降临！它抢走了独角兽，关进了黑暗的地狱之塔！' },
-  { num:'③', scene:'🗺️', bg:'#f5eeff', border:'#c85af5', sh:'#7a2ab5',
-    text:'通往地狱之塔的路上有<em>十座秘境</em>，被各种强大怪物守护着……' },
-  { num:'④', scene:'⚔️', bg:'#eaf8ff', border:'#3ab0ff', sh:'#1a6fb5',
-    text:'满满公主拿起水晶剑，踏上了<em>拯救独角兽</em>的冒险之旅！' },
+  { num:'①', scene:'👸', bg:'#fffbe8', border:'#f5a623', shadow:'#c88a00',
+    text:'水晶王国的公主<strong style="color:#ff5fa0">满满</strong>，<br>有一只神圣的独角兽，<br>是她最好的伙伴……' },
+  { num:'②', scene:'👹', bg:'#fff0f5', border:'#ff5fa0', shadow:'#c2336e',
+    text:'<strong style="color:#ff5fa0">地狱三角犬</strong>突然降临！<br>它抢走了独角兽，<br>关进了黑暗地狱之塔！' },
+  { num:'③', scene:'🗺️', bg:'#f5eeff', border:'#c85af5', shadow:'#7a2ab5',
+    text:'通往地狱之塔的路上，<br>有<strong style="color:#c85af5">十个秘境</strong>，<br>被怪物们守护着……' },
+  { num:'④', scene:'⚔️', bg:'#eaf8ff', border:'#3ab0ff', shadow:'#1a6fb5',
+    text:'满满公主拿起水晶剑，<br>踏上<strong style="color:#3ab0ff">拯救独角兽</strong><br>的冒险之旅！' },
 ];
-
-function showComicModal(index) {
-  const container = document.getElementById('comic-modal-container');
-  if (index >= COMIC_PANELS.length) {
-    // All panels done — fade out overlay then go to main
-    const existing = container.querySelector('.comic-modal-overlay');
-    if (existing) {
-      existing.style.transition = 'opacity 0.35s';
-      existing.style.opacity = '0';
-    }
-    setTimeout(() => {
-      container.innerHTML = '';
-      loadState();
-      showScreen('main');
-    }, 380);
-    return;
-  }
-  const p = COMIC_PANELS[index];
-  const isLast = index === COMIC_PANELS.length - 1;
-
-  // Build new overlay (starts invisible)
-  const newOverlay = document.createElement('div');
-  newOverlay.className = 'comic-modal-overlay';
-  newOverlay.style.opacity = '0';
-  newOverlay.style.transition = 'opacity 0.3s';
-  newOverlay.innerHTML = `
-    <div class="comic-modal-box" style="border-color:${p.border};box-shadow:6px 6px 0 ${p.sh};background:${p.bg}">
-      <div class="comic-modal-num" style="background:${p.border};color:#fff;border-color:${p.sh}">${p.num}</div>
-      <button class="comic-modal-skip" onclick="showComicModal(999)">跳过</button>
-      <span class="comic-modal-scene">${p.scene}</span>
-      <div class="comic-modal-text">${p.text.replace(/<em>/g,'<span class="em">').replace(/<\/em>/g,'</span>')}</div>
-      <button class="comic-modal-btn" onclick="scheduleNextModal(${index + 1})">
-        ${isLast ? '✨ 开始冒险！' : '下一页 →'}
-      </button>
-    </div>
-  `;
-
-  // Fade out old overlay if present, then swap
-  const oldOverlay = container.querySelector('.comic-modal-overlay');
-  if (oldOverlay) {
-    oldOverlay.style.transition = 'opacity 0.25s';
-    oldOverlay.style.opacity = '0';
-    setTimeout(() => {
-      container.innerHTML = '';
-      container.appendChild(newOverlay);
-      // Force reflow then fade in
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => { newOverlay.style.opacity = '1'; });
-      });
-    }, 260);
-  } else {
-    container.appendChild(newOverlay);
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => { newOverlay.style.opacity = '1'; });
-    });
-  }
-}
-
-function scheduleNextModal(nextIndex) {
-  showComicModal(nextIndex);
-}
+let _comicIdx = 0;
 
 function startGame() {
   loadState();
   showScreen('main');
 }
 
+function showComicPanel(idx) {
+  _comicIdx = idx;
+  const p = COMIC_PANELS[idx];
+  const overlay = document.getElementById('comic-overlay');
+  const card    = document.getElementById('comic-card');
+
+  // 更新内容
+  document.getElementById('comic-num').textContent   = p.num;
+  document.getElementById('comic-scene').textContent = p.scene;
+  document.getElementById('comic-body').innerHTML    = p.text;
+
+  // 卡片颜色
+  card.style.background = p.bg;
+  card.style.borderColor = p.border;
+  card.style.boxShadow  = `6px 6px 0 ${p.shadow}`;
+
+  // 进度点
+  const dots = document.getElementById('comic-dots');
+  dots.innerHTML = COMIC_PANELS.map((_,i) =>
+    `<div style="width:8px;height:8px;border-radius:50%;border:2px solid ${p.border};
+     background:${i<=idx ? p.border : 'transparent'};transition:all 0.3s"></div>`
+  ).join('');
+
+  // 按钮文字
+  const btn = document.getElementById('comic-next-btn');
+  btn.textContent = idx < COMIC_PANELS.length - 1 ? '下一页 →' : '✨ 开始冒险！';
+  btn.style.background = idx < COMIC_PANELS.length - 1
+    ? `linear-gradient(160deg,${p.border},${p.shadow})`
+    : 'linear-gradient(160deg,#ff5fa0,#c85af5)';
+
+  // 重触发弹出动画
+  card.style.animation = 'none';
+  card.offsetHeight; // reflow
+  card.style.animation = 'comicCardPop 0.45s cubic-bezier(.34,1.56,.64,1) both';
+
+  overlay.style.display = 'flex';
+}
+
+function nextComicPanel() {
+  if (_comicIdx < COMIC_PANELS.length - 1) {
+    showComicPanel(_comicIdx + 1);
+  } else {
+    document.getElementById('comic-overlay').style.display = 'none';
+    startGame();
+  }
+}
 
 /* ============================================================
    MAIN SCREEN
+
 ============================================================ */
 const PRINCESS_SPEECHES = {
   idle: [
@@ -3631,7 +3686,7 @@ function renderChallengeQ() {
   `;
 
   // Start timer (20s for math/science, 25 for lang/creative)
-  startTimer(q.typeCls === 'math' || q.typeCls === 'science' ? 20 : 25);
+  startTimer(300);
 }
 
 function startTimer(seconds) {
