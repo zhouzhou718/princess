@@ -118,7 +118,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 #magic-bg::after {
   content:'✦ ✧ ✦ ✧ ✦ ✧';
   position:absolute; top:55%; left:0; width:100%;
-  font-size:11px; color:rgba(200,90,245,0.25);
+  font-size:22px; color:rgba(200,90,245,0.25);
   letter-spacing:28px; pointer-events:none;
   animation: sparkleDrift 6s ease-in-out infinite alternate;
 }
@@ -146,7 +146,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 }
 .intro-title {
   font-family: 'ZCOOL KuaiLe', 'Ma Shan Zheng', cursive;
-  font-size:clamp(26px,7vw,34px);
+  font-size:clamp(52px,7vw,68px);
   color: #fff;
   text-align:center;
   margin-bottom:10px;
@@ -182,7 +182,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .comic-panel::before {
   content: attr(data-num);
   position:absolute; top:6px; left:9px;
-  font-family: var(--font-num); font-size:16px; font-weight:900;
+  font-family: var(--font-num); font-size:32px; font-weight:900;
   color: var(--c-purple);
 }
 .comic-panel:nth-child(1) { background:#fffbe8; border-color:#f5a623; box-shadow:3px 3px 0 #c88a00; }
@@ -190,14 +190,14 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .comic-panel:nth-child(3) { background:#f5eeff; border-color:#c85af5; box-shadow:3px 3px 0 #7a2ab5; }
 .comic-panel:nth-child(4) { background:#eaf8ff; border-color:#3ab0ff; box-shadow:3px 3px 0 #1a6fb5; }
 .comic-scene {
-  font-size:clamp(48px,14vw,72px);
+  font-size:clamp(96px,14vw,144px);
   text-align:center; display:block;
   margin:0 0 6px; line-height:1;
   animation:comicFloat 2.8s ease-in-out infinite;
 }
 @keyframes comicFloat { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-6px) scale(1.06)} }
 .comic-text {
-  font-size:clamp(13px,3.6vw,16px);
+  font-size:clamp(26px,3.6vw,32px);
   color: var(--c-text); line-height:1.65; text-align:center;
 }
 .comic-text .em { color: var(--c-pink); font-weight:bold; }
@@ -207,7 +207,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   to   { opacity:1; transform:scale(1) rotate(0deg); }
 }
 .intro-tap-hint {
-  font-size:15px; color:rgba(61,42,94,0.5);
+  font-size:30px; color:rgba(61,42,94,0.5);
   animation:tapHintBob 1.8s ease-in-out infinite;
 }
 @keyframes tapHintBob {
@@ -221,7 +221,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   background: linear-gradient(160deg, #ff5fa0, #c85af5);
   border:3px solid var(--outline);
   border-radius: var(--r-pill);
-  font-size:clamp(16px,4.5vw,20px);
+  font-size:clamp(32px,4.5vw,40px);
   color:#fff; letter-spacing:3px;
   box-shadow: var(--sh-pink), 0 0 20px rgba(255,95,160,0.35);
   transition:all 0.15s cubic-bezier(.34,1.56,.64,1);
@@ -240,7 +240,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   border:3px solid var(--outline);
   border-radius:var(--r-pill);
   font-family:var(--font-title);
-  font-size:clamp(18px,5vw,22px);
+  font-size:clamp(36px,5vw,44px);
   color:#fff; letter-spacing:2px;
   box-shadow:5px 5px 0 var(--outline), 0 0 24px rgba(58,176,255,0.4);
   transition:all 0.15s cubic-bezier(.34,1.56,.64,1);
@@ -282,25 +282,25 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   background:var(--c-yellow); color:var(--c-text);
   border:3px solid var(--outline);
   border-radius:var(--r-pill);
-  padding:2px 12px; font-size:16px; font-weight:900;
+  padding:2px 12px; font-size:32px; font-weight:900;
   font-family:var(--font-num);
   box-shadow:2px 2px 0 var(--outline);
 }
-.comic-modal-scene { font-size:72px; line-height:1; margin:6px 0 10px; display:block; }
-.comic-modal-text { font-size:16px; color:var(--c-text); line-height:1.7; margin-bottom:14px; }
+.comic-modal-scene { font-size:144px; line-height:1; margin:6px 0 10px; display:block; }
+.comic-modal-text { font-size:32px; color:var(--c-text); line-height:1.7; margin-bottom:14px; }
 .comic-modal-text .em { color:var(--c-pink); font-weight:bold; }
 .comic-modal-btn {
   padding:10px 28px;
   background:linear-gradient(135deg,#ff5fa0,#c85af5);
   border:3px solid var(--outline); border-radius:var(--r-pill);
-  color:#fff; font-size:15px; font-weight:bold;
+  color:#fff; font-size:30px; font-weight:bold;
   box-shadow:3px 3px 0 var(--outline);
   transition:all 0.15s;
 }
 .comic-modal-btn:active { transform:translate(2px,2px); box-shadow:1px 1px 0 var(--outline); }
 .comic-modal-skip {
   position:absolute; top:10px; right:14px;
-  font-size:11px; color:rgba(61,42,94,0.45);
+  font-size:22px; color:rgba(61,42,94,0.45);
   background:none; border:none; cursor:pointer;
 }
 
@@ -318,7 +318,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 }
 .main-topbar-title {
   font-family: var(--font-title);
-  font-size:clamp(18px,5vw,24px);
+  font-size:clamp(36px,5vw,48px);
   color: var(--c-text);
   -webkit-text-stroke: 1px var(--outline);
   text-shadow: 2px 2px 0 rgba(200,90,245,0.25);
@@ -330,7 +330,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   border:2.5px solid var(--outline);
   border-radius: var(--r-pill);
   padding:4px 10px;
-  font-size:13px; color: var(--c-purple);
+  font-size:26px; color: var(--c-purple);
   box-shadow: var(--sh-card);
   font-weight:bold;
   white-space:nowrap; flex-shrink:0;
@@ -348,7 +348,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .princess-stage::after {
   content:'🌿🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿';
   position:absolute; bottom:0; left:0; right:0;
-  font-size:18px; letter-spacing:2px;
+  font-size:36px; letter-spacing:2px;
   text-align:center; line-height:1;
   pointer-events:none; z-index:2;
   opacity:0.7;
@@ -377,21 +377,22 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 }
 .princess-name {
   font-family: var(--font-title);
-  font-size:18px; color: var(--c-purple);
+  font-size:36px; color: var(--c-purple);
   margin-top:2px; letter-spacing:2px;
   -webkit-text-stroke:0.8px var(--outline);
   white-space:nowrap;
 }
 .replace-btn {
-  position:relative; bottom:auto; margin-top:4px;
+  position:relative; bottom:auto; margin-top:2px;
   background:#fff9fe;
   border:2px solid var(--outline);
   border-radius: var(--r-pill);
-  padding:4px 12px;
-  font-size:13px; color: var(--c-purple);
+  padding:3px 8px;
+  font-size:20px; color: var(--c-purple);
   box-shadow:2px 2px 0 var(--outline);
   transition:all 0.15s;
-  white-space:nowrap;
+  white-space:normal; word-break:break-all;
+  text-align:center; width:100%; box-sizing:border-box;
 }
 .replace-btn:active { transform:translate(1px,1px); box-shadow:1px 1px 0 var(--outline); }
 
@@ -399,54 +400,56 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .princess-stage {
   position:relative; width:100%; flex:1;
   display:flex; align-items:center; justify-content:space-between;
-  min-height:0; overflow:hidden;
-  padding:0 6px;
-  gap:4px;
+  min-height:0; overflow:visible;
+  padding:0 4px;
+  gap:2px;
 }
 .weapon-float {
-  display:flex; flex-direction:column; align-items:center; gap:4px;
-  z-index:3; flex-shrink:0; width:78px;
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+  z-index:3; flex-shrink:0; width:80px;
 }
 .weapon-icon {
-  font-size:clamp(38px,11vw,54px);
+  font-size:48px;
   animation:weaponFloat 3s ease-in-out infinite;
   filter: drop-shadow(2px 4px 0 rgba(61,42,94,0.25));
-  cursor:pointer; line-height:1;
+  cursor:pointer; line-height:1; display:block; text-align:center;
 }
 @keyframes weaponFloat {
   0%,100% { transform:translateY(0) rotate(-8deg); }
-  50%      { transform:translateY(-10px) rotate(8deg); }
+  50%      { transform:translateY(-8px) rotate(8deg); }
 }
 .weapon-name {
-  font-size:12px; color: var(--c-orange);
-  text-align:center; max-width:76px; line-height:1.3;
+  font-size:16px; color: var(--c-orange);
+  text-align:center; width:100%; line-height:1.3;
   background:#fffbe8; border:2px solid var(--outline);
-  border-radius: var(--r-pill); padding:3px 7px;
+  border-radius: var(--r-pill); padding:3px 6px;
   box-shadow:2px 2px 0 var(--outline);
-  white-space:nowrap;
+  white-space:normal; word-break:break-all;
+  box-sizing:border-box;
 }
 /* Floating gem — RIGHT, parallel to weapon */
 .gem-float {
-  display:flex; flex-direction:column; align-items:center; gap:4px;
-  z-index:3; flex-shrink:0; width:78px;
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+  z-index:3; flex-shrink:0; width:80px;
 }
 .gem-icon {
-  font-size:clamp(38px,11vw,54px);
+  font-size:48px;
   animation:gemBounce 3.5s ease-in-out infinite;
   filter: drop-shadow(2px 4px 0 rgba(61,42,94,0.22));
-  cursor:pointer; line-height:1;
+  cursor:pointer; line-height:1; display:block; text-align:center;
 }
 @keyframes gemBounce {
   0%,100% { transform:rotate(-6deg) scale(1); }
-  50%      { transform:rotate(6deg) scale(1.1); }
+  50%      { transform:rotate(6deg) scale(1.08); }
 }
 .gem-name {
-  font-size:12px; color: var(--c-blue);
-  text-align:center; max-width:76px; line-height:1.3;
+  font-size:16px; color: var(--c-blue);
+  text-align:center; width:100%; line-height:1.3;
   background:#eaf8ff; border:2px solid var(--outline);
-  border-radius: var(--r-pill); padding:3px 7px;
+  border-radius: var(--r-pill); padding:3px 6px;
   box-shadow:2px 2px 0 var(--outline);
-  white-space:nowrap;
+  white-space:normal; word-break:break-all;
+  box-sizing:border-box;
 }
 
 /* Speech bubble */
@@ -458,7 +461,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   padding:8px 12px;
   width:100%;
   box-sizing:border-box;
-  font-size:clamp(13px,3.5vw,15px);
+  font-size:clamp(26px,3.5vw,30px);
   color: var(--c-text); line-height:1.55;
   z-index:10;
   animation:bubbleIn 0.4s cubic-bezier(.34,1.56,.64,1);
@@ -524,14 +527,14 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   border-color: var(--outline);
   border-width:3px;
 }
-.nav-btn.adventure .nav-label { color:#fff; font-size:15px; }
-.nav-btn.adventure .nav-icon  { font-size:32px; }
-.nav-btn .nav-icon { font-size:22px; filter:drop-shadow(1px 1px 0 rgba(61,42,94,0.2)); }
-.nav-btn .nav-label { font-size:13px; color: var(--c-text); font-weight:bold; } /* ×2 */
+.nav-btn.adventure .nav-label { color:#fff; font-size:30px; }
+.nav-btn.adventure .nav-icon  { font-size:64px; }
+.nav-btn .nav-icon { font-size:44px; filter:drop-shadow(1px 1px 0 rgba(61,42,94,0.2)); }
+.nav-btn .nav-label { font-size:26px; color: var(--c-text); font-weight:bold; } /* ×2 */
 .nav-badge {
   position:absolute; top:4px; right:7px;
   background:var(--c-red); color:#fff;
-  font-size:11px; font-family:var(--font-num); font-weight:900;
+  font-size:22px; font-family:var(--font-num); font-weight:900;
   padding:2px 5px; border-radius:var(--r-pill);
   min-width:17px; text-align:center;
   border:2px solid var(--outline);
@@ -569,14 +572,14 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   padding:8px 14px 6px; flex-shrink:0;
 }
 .half-sheet-title {
-  font-family:var(--font-title); font-size:22px; /* ×2 */
+  font-family:var(--font-title); font-size:44px; /* ×2 */
   color:var(--c-purple); -webkit-text-stroke:0.8px var(--outline);
   flex:1;
 }
 .half-sheet-close {
   width:32px; height:32px; border-radius:50%;
   background:#fff; border:2.5px solid var(--outline);
-  font-size:16px; display:flex; align-items:center; justify-content:center;
+  font-size:32px; display:flex; align-items:center; justify-content:center;
   box-shadow:2px 2px 0 var(--outline); color:var(--c-text);
 }
 .half-sheet-close:active { transform:translate(1px,1px); box-shadow:1px 1px 0 var(--outline); }
@@ -601,7 +604,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   border-radius:var(--r-pill);
   background:#fff9fe;
   border:3px solid var(--outline);
-  font-size:13px; font-weight:bold;
+  font-size:26px; font-weight:bold;
   display:flex; align-items:center; justify-content:center;
   box-shadow:2px 2px 0 var(--outline);
   transition:all 0.15s; flex-shrink:0; color:var(--c-text);
@@ -609,7 +612,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 }
 .back-btn:active { transform:translate(1px,1px); box-shadow:1px 1px 0 var(--outline); }
 .subscreen-title {
-  font-family:var(--font-title); font-size:clamp(20px,5.5vw,26px); /* ×2 */
+  font-family:var(--font-title); font-size:clamp(40px,5.5vw,52px); /* ×2 */
   color: var(--c-purple); -webkit-text-stroke:1px var(--outline);
 }
 .bag-scroll {
@@ -633,25 +636,25 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   box-shadow:3px 3px 0 #c88a00;
 }
 .bag-slot.has-item:active { transform:translate(2px,2px); box-shadow:1px 1px 0 #c88a00; }
-.bag-slot .slot-icon { font-size:28px; }
-.bag-slot .slot-name { font-size:10px; color:var(--c-text); text-align:center; line-height:1.3; font-weight:bold; }
-.bag-slot.empty .slot-icon { font-size:20px; opacity:0.2; }
+.bag-slot .slot-icon { font-size:56px; }
+.bag-slot .slot-name { font-size:20px; color:var(--c-text); text-align:center; line-height:1.3; font-weight:bold; }
+.bag-slot.empty .slot-icon { font-size:40px; opacity:0.2; }
 .rarity-dot { position:absolute; top:4px; right:4px; width:8px; height:8px; border-radius:50%; border:2px solid var(--outline); }
 
 /* Item detail */
 .item-detail-content { text-align:center; padding:0 8px 8px; }
-.item-detail-icon { font-size:64px; display:block; margin-bottom:8px; }
-.item-detail-name { font-family:var(--font-title); font-size:24px; color:var(--c-purple); margin-bottom:5px; -webkit-text-stroke:0.8px var(--outline); }
-.item-detail-rarity { font-size:14px; letter-spacing:2px; margin-bottom:10px; font-weight:bold; }
+.item-detail-icon { font-size:128px; display:block; margin-bottom:8px; }
+.item-detail-name { font-family:var(--font-title); font-size:48px; color:var(--c-purple); margin-bottom:5px; -webkit-text-stroke:0.8px var(--outline); }
+.item-detail-rarity { font-size:28px; letter-spacing:2px; margin-bottom:10px; font-weight:bold; }
 .item-detail-story {
-  font-size:14px; color:var(--c-text2); line-height:1.8; margin-bottom:13px;
+  font-size:28px; color:var(--c-text2); line-height:1.8; margin-bottom:13px;
   background:#fff; border:2px solid rgba(61,42,94,0.12);
   border-radius:var(--r-md); padding:10px 12px;
   box-shadow:2px 2px 0 rgba(61,42,94,0.08);
 }
 .item-stats { display:flex; gap:10px; justify-content:center; }
 .stat-pill {
-  padding:7px 16px; border-radius:var(--r-pill); font-size:14px;
+  padding:7px 16px; border-radius:var(--r-pill); font-size:28px;
   display:flex; align-items:center; gap:5px;
   border:2.5px solid var(--outline); font-weight:bold;
   box-shadow:2px 2px 0 var(--outline);
@@ -682,23 +685,23 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .card-item:active { transform:translate(2px,2px); box-shadow:1px 1px 0 rgba(61,42,94,0.18); }
 .card-locked { filter:grayscale(0.6); opacity:0.55; cursor:default; }
 .card-locked:active { transform:none; }
-.card-icon { font-size:38px; display:block; margin-bottom:5px; position:relative; z-index:1; }
-.card-name { font-family:var(--font-title); font-size:15px; margin-bottom:3px; position:relative; z-index:1; color:var(--c-text); -webkit-text-stroke:0.5px var(--outline); }
+.card-icon { font-size:76px; display:block; margin-bottom:5px; position:relative; z-index:1; }
+.card-name { font-family:var(--font-title); font-size:30px; margin-bottom:3px; position:relative; z-index:1; color:var(--c-text); -webkit-text-stroke:0.5px var(--outline); }
 .card-lvl {
   display:inline-flex; align-items:center; gap:3px;
   background:#fff; border:2px solid var(--outline); border-radius:var(--r-pill);
-  padding:2px 8px; font-size:11px; color:var(--c-purple);
+  padding:2px 8px; font-size:22px; color:var(--c-purple);
   position:relative; z-index:1; margin-bottom:4px;
   box-shadow:1px 1px 0 var(--outline); font-weight:bold;
 }
-.card-stars { font-size:12px; letter-spacing:1px; position:relative; z-index:1; }
-.card-lock-icon { position:absolute; top:9px; right:10px; font-size:18px; opacity:0.5; }
+.card-stars { font-size:24px; letter-spacing:1px; position:relative; z-index:1; }
+.card-lock-icon { position:absolute; top:9px; right:10px; font-size:36px; opacity:0.5; }
 .upgrade-btn {
   display:block; width:100%; margin-top:7px;
   padding:7px; border-radius:var(--r-sm);
   background:linear-gradient(135deg,#f5d0ff,#c8e8ff);
   border:2.5px solid var(--outline);
-  font-size:12px; color:var(--c-text);
+  font-size:24px; color:var(--c-text);
   position:relative; z-index:1; font-weight:bold;
   box-shadow:2px 2px 0 var(--outline); transition:all 0.15s;
 }
@@ -715,7 +718,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   flex-shrink:0; margin-top:max(36px, env(safe-area-inset-top, 36px));
 }
 .adv-title {
-  font-family:var(--font-title); font-size:clamp(20px,5.5vw,26px); /* ×2 */
+  font-family:var(--font-title); font-size:clamp(40px,5.5vw,52px); /* ×2 */
   color:var(--c-purple); -webkit-text-stroke:1px var(--outline);
 }
 .realm-scroll {
@@ -727,9 +730,9 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 
 /* ── 普通关卡：横排行式 ── */
 .realm-row {
-  width:100%; height:72px;
-  display:flex; align-items:center; gap:10px;
-  padding:0 14px 0 10px;
+  width:100%; min-height:90px;
+  display:flex; align-items:center; gap:12px;
+  padding:8px 14px 8px 10px;
   border:3px solid var(--outline);
   border-radius:18px;
   box-shadow:4px 4px 0 var(--outline);
@@ -741,24 +744,24 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   transform:translate(2px,2px); box-shadow:2px 2px 0 var(--outline);
 }
 .realm-row-num {
-  font-family:var(--font-num); font-size:15px; font-weight:900;
+  font-family:var(--font-num); font-size:30px; font-weight:900;
   color:var(--c-purple); flex-shrink:0; width:20px; text-align:center;
   opacity:0.6;
 }
 .realm-row-monster {
-  font-size:36px; line-height:1; flex-shrink:0;
+  font-size:52px; line-height:1; flex-shrink:0;
   filter:drop-shadow(2px 3px 0 rgba(61,42,94,0.2));
 }
 .realm-row-info {
   flex:1; min-width:0;
 }
 .realm-row-name {
-  font-family:var(--font-title); font-size:16px;
+  font-family:var(--font-title); font-size:28px;
   color:var(--c-text); -webkit-text-stroke:0.5px var(--outline);
-  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  white-space:normal; line-height:1.3;
 }
 .realm-row-action { flex-shrink:0; }
-.realm-lock-inline { font-size:22px; opacity:0.7; }
+.realm-lock-inline { font-size:44px; opacity:0.7; }
 .realm-beaten-row {
   display:flex; align-items:center; gap:6px; flex-shrink:0;
 }
@@ -806,7 +809,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 }
 
 .realm-card-monster {
-  font-size:58px; line-height:1;
+  font-size:116px; line-height:1;
   filter:drop-shadow(3px 4px 0 rgba(61,42,94,0.3));
   animation:monsterBob 3s ease-in-out infinite;
   position:relative; z-index:2;
@@ -816,7 +819,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   50%      { transform:translateY(-8px) rotate(3deg) scale(1.05); }
 }
 .realm-card-name {
-  font-family:var(--font-title); font-size:18px;
+  font-family:var(--font-title); font-size:36px;
   color:var(--c-text); -webkit-text-stroke:0.8px var(--outline);
   margin-top:6px; text-align:center;
   position:relative; z-index:2;
@@ -827,7 +830,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   position:absolute; inset:0; z-index:5;
   display:flex; align-items:center; justify-content:center;
   background:rgba(255,255,255,0.35);
-  font-size:36px;
+  font-size:72px;
 }
 /* Challenge button inside card */
 .realm-challenge-btn {
@@ -836,7 +839,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   background:linear-gradient(135deg,#ff5fa0,#c85af5);
   border:3px solid var(--outline);
   border-radius:var(--r-pill);
-  color:#fff; font-size:14px; font-weight:bold;
+  color:#fff; font-size:28px; font-weight:bold;
   box-shadow:3px 3px 0 var(--outline);
   z-index:8; white-space:nowrap;
   transition:all 0.15s;
@@ -853,7 +856,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   background:rgba(255,255,255,0.45);
 }
 .realm-beaten-icon {
-  font-size:52px; /* ~30% of 130px-ish card height */
+  font-size:104px; /* ~30% of 130px-ish card height */
   line-height:1;
   filter:drop-shadow(2px 3px 0 rgba(26,122,64,0.4));
   animation:beatenPulse 2s ease-in-out infinite;
@@ -863,7 +866,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   50%      { transform:scale(1.1) rotate(3deg); }
 }
 .realm-beaten-label {
-  font-family:var(--font-title); font-size:16px; color:#1a7a40;
+  font-family:var(--font-title); font-size:32px; color:#1a7a40;
   -webkit-text-stroke:0.8px var(--outline);
   margin-top:4px;
 }
@@ -871,7 +874,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .realm-hell-tag {
   position:absolute; top:0; left:0; z-index:4;
   background:linear-gradient(90deg,var(--c-red),#ff8c3a);
-  color:#fff; font-size:11px; font-weight:bold;
+  color:#fff; font-size:22px; font-weight:bold;
   padding:5px 14px;
   border-right:2.5px solid var(--outline);
   border-bottom:2.5px solid var(--outline);
@@ -897,9 +900,9 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   box-shadow:6px 6px 0 var(--outline);
   animation:comicModalPop 0.35s cubic-bezier(.34,1.56,.64,1);
 }
-.simple-alert-icon { font-size:56px; display:block; margin-bottom:10px; }
+.simple-alert-icon { font-size:112px; display:block; margin-bottom:10px; }
 .simple-alert-msg {
-  font-family:var(--font-title); font-size:20px;
+  font-family:var(--font-title); font-size:40px;
   color:var(--c-text); line-height:1.7; margin-bottom:18px;
   -webkit-text-stroke:0.5px var(--outline);
 }
@@ -907,7 +910,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   padding:10px 32px;
   background:linear-gradient(135deg,#3cdb7a,#1ecfbe);
   border:3px solid var(--outline); border-radius:var(--r-pill);
-  color:#fff; font-size:15px; font-weight:bold;
+  color:#fff; font-size:30px; font-weight:bold;
   box-shadow:3px 3px 0 var(--outline);
   transition:all 0.15s;
 }
@@ -917,7 +920,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
    PICKER MODAL
 ============================================================ */
 .modal-overlay {
-  position:absolute; inset:0; z-index:50;
+  position:fixed; inset:0; z-index:200;
   background:rgba(61,42,94,0.45);
   display:none; align-items:flex-end; justify-content:center;
 }
@@ -939,7 +942,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   margin:12px auto 4px; flex-shrink:0; opacity:0.35;
 }
 .modal-title {
-  font-family:var(--font-title); font-size:19px;
+  font-family:var(--font-title); font-size:38px;
   text-align:center; padding:6px 16px 12px;
   color: var(--c-purple);
   -webkit-text-stroke:0.8px var(--outline);
@@ -966,9 +969,9 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   border-color: var(--c-pink);
   box-shadow:3px 3px 0 var(--c-pink);
 }
-.picker-item .pi-icon { font-size:38px; }
-.picker-item .pi-name { font-size:11px; color:var(--c-text); text-align:center; line-height:1.3; font-weight:bold; }
-.picker-item .pi-sub  { font-size:9px; color:var(--c-text2); }
+.picker-item .pi-icon { font-size:76px; }
+.picker-item .pi-name { font-size:22px; color:var(--c-text); text-align:center; line-height:1.3; font-weight:bold; }
+.picker-item .pi-sub  { font-size:18px; color:var(--c-text2); }
 
 /* ============================================================
    BAG SCREEN
@@ -985,7 +988,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   border-radius:var(--r-pill);
   background:#fff9fe;
   border:3px solid var(--outline);
-  font-size:13px; font-weight:bold;
+  font-size:26px; font-weight:bold;
   display:flex; align-items:center; justify-content:center;
   box-shadow:2px 2px 0 var(--outline);
   transition:all 0.15s; flex-shrink:0; color:var(--c-text);
@@ -993,7 +996,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 }
 .back-btn:active { transform:translate(1px,1px); box-shadow:1px 1px 0 var(--outline); }
 .subscreen-title {
-  font-family:var(--font-title); font-size:clamp(18px,5vw,23px);
+  font-family:var(--font-title); font-size:clamp(36px,5vw,46px);
   color: var(--c-purple);
   -webkit-text-stroke:1px var(--outline);
 }
@@ -1019,25 +1022,25 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   box-shadow:3px 3px 0 #c88a00;
 }
 .bag-slot.has-item:active { transform:translate(2px,2px); box-shadow:1px 1px 0 #c88a00; }
-.bag-slot .slot-icon { font-size:28px; }
-.bag-slot .slot-name { font-size:9px; color:var(--c-text); text-align:center; line-height:1.3; font-weight:bold; }
-.bag-slot.empty .slot-icon { font-size:20px; opacity:0.2; }
+.bag-slot .slot-icon { font-size:56px; }
+.bag-slot .slot-name { font-size:18px; color:var(--c-text); text-align:center; line-height:1.3; font-weight:bold; }
+.bag-slot.empty .slot-icon { font-size:40px; opacity:0.2; }
 .rarity-dot { position:absolute; top:4px; right:4px; width:8px; height:8px; border-radius:50%; border:2px solid var(--outline); }
 
 /* Item detail */
 .item-detail-content { text-align:center; padding:0 8px 8px; }
-.item-detail-icon { font-size:64px; display:block; margin-bottom:8px; }
-.item-detail-name { font-family:var(--font-title); font-size:22px; color:var(--c-purple); margin-bottom:5px; -webkit-text-stroke:0.8px var(--outline); }
-.item-detail-rarity { font-size:12px; letter-spacing:2px; margin-bottom:10px; font-weight:bold; }
+.item-detail-icon { font-size:128px; display:block; margin-bottom:8px; }
+.item-detail-name { font-family:var(--font-title); font-size:44px; color:var(--c-purple); margin-bottom:5px; -webkit-text-stroke:0.8px var(--outline); }
+.item-detail-rarity { font-size:24px; letter-spacing:2px; margin-bottom:10px; font-weight:bold; }
 .item-detail-story {
-  font-size:13px; color:var(--c-text2); line-height:1.8; margin-bottom:13px;
+  font-size:26px; color:var(--c-text2); line-height:1.8; margin-bottom:13px;
   background:#fff; border:2px solid rgba(61,42,94,0.12);
   border-radius: var(--r-md); padding:10px 12px;
   box-shadow:2px 2px 0 rgba(61,42,94,0.08);
 }
 .item-stats { display:flex; gap:10px; justify-content:center; }
 .stat-pill {
-  padding:6px 15px; border-radius:var(--r-pill); font-size:12px;
+  padding:6px 15px; border-radius:var(--r-pill); font-size:24px;
   display:flex; align-items:center; gap:5px;
   border:2.5px solid var(--outline); font-weight:bold;
   box-shadow:2px 2px 0 var(--outline);
@@ -1069,24 +1072,24 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .card-item:active { transform:translate(2px,2px); box-shadow:1px 1px 0 rgba(61,42,94,0.18); }
 .card-locked { filter:grayscale(0.6); opacity:0.55; cursor:default; }
 .card-locked:active { transform:none; }
-.card-icon { font-size:38px; display:block; margin-bottom:5px; position:relative; z-index:1; }
-.card-name { font-family:var(--font-title); font-size:14px; margin-bottom:3px; position:relative; z-index:1; color:var(--c-text); -webkit-text-stroke:0.5px var(--outline); }
+.card-icon { font-size:76px; display:block; margin-bottom:5px; position:relative; z-index:1; }
+.card-name { font-family:var(--font-title); font-size:28px; margin-bottom:3px; position:relative; z-index:1; color:var(--c-text); -webkit-text-stroke:0.5px var(--outline); }
 .card-lvl {
   display:inline-flex; align-items:center; gap:3px;
   background:#fff; border:2px solid var(--outline);
   border-radius:var(--r-pill);
-  padding:2px 8px; font-size:10px; color:var(--c-purple);
+  padding:2px 8px; font-size:20px; color:var(--c-purple);
   position:relative; z-index:1; margin-bottom:4px;
   box-shadow:1px 1px 0 var(--outline); font-weight:bold;
 }
-.card-stars { font-size:12px; letter-spacing:1px; position:relative; z-index:1; }
-.card-lock-icon { position:absolute; top:9px; right:10px; font-size:18px; opacity:0.5; }
+.card-stars { font-size:24px; letter-spacing:1px; position:relative; z-index:1; }
+.card-lock-icon { position:absolute; top:9px; right:10px; font-size:36px; opacity:0.5; }
 .upgrade-btn {
   display:block; width:100%; margin-top:7px;
   padding:7px; border-radius:var(--r-sm);
   background:linear-gradient(135deg,#f5d0ff,#c8e8ff);
   border:2.5px solid var(--outline);
-  font-size:11px; color:var(--c-text); letter-spacing:0px;
+  font-size:22px; color:var(--c-text); letter-spacing:0px;
   position:relative; z-index:1; font-weight:bold;
   box-shadow:2px 2px 0 var(--outline);
   transition:all 0.15s;
@@ -1104,7 +1107,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   flex-shrink:0; margin-top:max(36px, env(safe-area-inset-top, 36px));
 }
 .adv-title {
-  font-family:var(--font-title); font-size:clamp(18px,5vw,23px);
+  font-family:var(--font-title); font-size:clamp(36px,5vw,46px);
   color:var(--c-purple);
   -webkit-text-stroke:1px var(--outline);
 }
@@ -1132,35 +1135,35 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .realm-card:not(.locked):active { transform:translate(2px,2px); box-shadow:1px 1px 0 rgba(61,42,94,0.18); }
 .realm-inner { display:flex; align-items:center; gap:12px; padding:13px 14px; }
 .realm-art {
-  font-size:clamp(42px,12vw,60px);
+  font-size:clamp(84px,12vw,120px);
   flex-shrink:0; line-height:1;
   filter:drop-shadow(2px 3px 0 rgba(61,42,94,0.25));
 }
 .realm-info { flex:1; min-width:0; }
 .realm-name {
   font-family:var(--font-title);
-  font-size:clamp(14px,3.8vw,18px);
+  font-size:clamp(28px,3.8vw,36px);
   margin-bottom:3px;
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
   color:var(--c-text); -webkit-text-stroke:0.5px var(--outline);
 }
 .realm-desc {
-  font-size:clamp(10px,2.8vw,12px);
+  font-size:clamp(20px,2.8vw,24px);
   color:var(--c-text2); line-height:1.5;
   overflow:hidden; text-overflow:ellipsis;
   display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
 }
 .realm-meta { display:flex; gap:5px; margin-top:5px; flex-wrap:wrap; }
 .realm-tag {
-  padding:2px 8px; border-radius:var(--r-pill); font-size:9px;
+  padding:2px 8px; border-radius:var(--r-pill); font-size:18px;
   background:#fff; border:2px solid var(--outline);
   color:var(--c-text2); font-weight:bold;
   box-shadow:1px 1px 0 var(--outline);
 }
 .realm-right { flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:4px; }
-.realm-lock  { font-size:18px; opacity:0.5; }
+.realm-lock  { font-size:36px; opacity:0.5; }
 .realm-arrow {
-  font-size:20px; color:var(--c-purple);
+  font-size:40px; color:var(--c-purple);
   background:#fff; border:2.5px solid var(--outline);
   width:28px; height:28px; border-radius:50%;
   display:flex; align-items:center; justify-content:center;
@@ -1171,7 +1174,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   background:var(--c-green2);
   border:2.5px solid var(--outline);
   border-radius:var(--r-pill); padding:3px 10px;
-  font-size:10px; color:#1a7a40; font-weight:bold;
+  font-size:20px; color:#1a7a40; font-weight:bold;
   display:flex; align-items:center; gap:4px;
   box-shadow:2px 2px 0 var(--outline);
 }
@@ -1185,7 +1188,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   content:'⚔️ 最终决战';
   position:absolute; top:0; left:0;
   background:linear-gradient(90deg,var(--c-red),#ff8c3a);
-  font-size:10px; color:#fff; padding:4px 12px;
+  font-size:20px; color:#fff; padding:4px 12px;
   border-radius:var(--r-xl) 0 var(--r-sm) 0;
   letter-spacing:1px; font-family:var(--font-body); font-weight:bold;
   border-right:2px solid var(--outline); border-bottom:2px solid var(--outline);
@@ -1201,9 +1204,11 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 ============================================================ */
 #screen-battle {
   justify-content:flex-start;
-  background:linear-gradient(180deg,#0d0018 0%,#2d0a0a 50%,#0d0010 100%);
+  background:linear-gradient(180deg,#0d0018 0%,#2d0a0a 55%,#0d0010 100%);
   overflow:hidden;
 }
+
+/* ── 顶部标题栏 ── */
 .battle-header {
   width:100%; padding:6px 12px 4px;
   display:flex; align-items:center; justify-content:space-between;
@@ -1211,31 +1216,66 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   margin-top:max(36px, env(safe-area-inset-top, 36px));
 }
 .battle-title {
-  font-family:var(--font-title); font-size:16px;
+  font-family:var(--font-title); font-size:28px;
   color:#ff9090; letter-spacing:1px;
   text-shadow:0 0 16px rgba(239,68,68,0.7);
 }
 
-/* ── BOSS 区域 ── */
-.battle-boss-area {
+/* ── 主战斗舞台：左右布局 ── */
+.battle-stage {
   width:100%; flex-shrink:0;
-  display:flex; flex-direction:column; align-items:center;
-  padding:4px 0 10px; position:relative; z-index:2;
+  display:flex; align-items:flex-start; justify-content:space-between;
+  padding:6px 10px 0;
+  position:relative; z-index:2;
+  gap:6px;
 }
-.battle-boss-halo {
-  position:absolute; width:140px; height:140px; border-radius:50%;
-  background:radial-gradient(circle, rgba(239,68,68,0.35) 0%, transparent 70%);
-  top:0; animation:haloPulse 2.5s ease-in-out infinite;
-  pointer-events:none;
+
+/* 公主侧（左） */
+.battle-side-princess {
+  flex:1; display:flex; flex-direction:column; align-items:center; gap:4px;
 }
-@keyframes haloPulse {
-  0%,100%{transform:scale(1);opacity:0.7;}
-  50%{transform:scale(1.3);opacity:1;}
+.battle-side-boss {
+  flex:1; display:flex; flex-direction:column; align-items:center; gap:4px;
+}
+
+/* HP 条（位于角色上方） */
+.battle-hp-block {
+  width:100%;
+  background:rgba(0,0,0,0.35);
+  border:1.5px solid rgba(255,255,255,0.1);
+  border-radius:10px;
+  padding:5px 8px 6px;
+}
+.battle-hp-label {
+  font-size:18px; font-weight:bold; color:rgba(255,255,255,0.55);
+  display:flex; justify-content:space-between; align-items:center;
+  margin-bottom:4px;
+}
+.battle-hp-num { font-family:var(--font-num); font-size:17px; color:rgba(255,255,255,0.4); }
+.battle-hp-track {
+  width:100%; height:12px;
+  background:rgba(0,0,0,0.5);
+  border-radius:6px; border:1px solid rgba(255,255,255,0.08);
+  overflow:hidden;
+}
+.battle-hp-fill { height:100%; border-radius:5px; transition:width 0.6s cubic-bezier(.34,1.2,.64,1); }
+.boss-hp-fill     { background:linear-gradient(90deg,#7f1d1d,#ef4444,#ff8c3a); }
+.princess-hp-fill { background:linear-gradient(90deg,#831843,#ff5fa0,#c85af5); }
+
+/* 角色图像 */
+.battle-char-icon {
+  font-size:100px; line-height:1;
+  filter:drop-shadow(0 0 14px rgba(255,90,160,0.7));
+  animation:prinFloat 3s ease-in-out infinite;
+}
+@keyframes prinFloat {
+  0%,100%{transform:translateY(0) scale(1);}
+  50%{transform:translateY(-8px) scale(1.04);}
 }
 .battle-boss-icon {
-  font-size:80px; line-height:1; position:relative; z-index:2;
+  font-size:100px; line-height:1; position:relative; z-index:2;
   animation:bossFloat 3s ease-in-out infinite;
-  filter:drop-shadow(0 0 20px rgba(239,68,68,0.9));
+  filter:drop-shadow(0 0 18px rgba(239,68,68,0.9));
   transition:filter 0.5s;
 }
 @keyframes bossFloat {
@@ -1250,54 +1290,56 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   filter:grayscale(1) opacity(0.35) !important;
   animation:none !important;
 }
-.battle-boss-name {
-  font-family:var(--font-title); font-size:18px; font-weight:bold;
-  color:#ffb0b0; margin:6px 0 10px;
-  text-shadow:0 0 10px rgba(239,68,68,0.6);
+.battle-char-label {
+  font-family:var(--font-title); font-size:22px; font-weight:bold;
+  text-align:center; line-height:1.2;
+}
+.battle-char-label.princess-label { color:#ffb0e0; text-shadow:0 0 8px rgba(255,90,160,0.5); }
+.battle-char-label.boss-label     { color:#ffb0b0; text-shadow:0 0 8px rgba(239,68,68,0.5); }
+
+/* VS 中间区 */
+.battle-vs {
+  flex-shrink:0; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; padding-top:60px; gap:4px; z-index:2;
+}
+.battle-vs-text {
+  font-family:var(--font-num); font-size:32px; font-weight:900;
+  color:#ffda3a; text-shadow:0 0 12px rgba(255,218,58,0.8);
+  letter-spacing:2px;
+}
+.battle-boss-halo {
+  position:absolute; width:120px; height:120px; border-radius:50%;
+  background:radial-gradient(circle, rgba(239,68,68,0.3) 0%, transparent 70%);
+  animation:haloPulse 2.5s ease-in-out infinite; pointer-events:none;
+}
+@keyframes haloPulse {
+  0%,100%{transform:scale(1);opacity:0.7;}
+  50%{transform:scale(1.3);opacity:1;}
 }
 
-/* ── HP 条 ── */
-.battle-hp-bar-wrap { width:100%; }
-.battle-hp-label { font-size:11px; font-weight:bold; color:rgba(255,255,255,0.5); }
-.battle-hp-track {
-  width:100%; height:14px;
-  background:rgba(0,0,0,0.5);
-  border-radius:7px; border:1.5px solid rgba(255,255,255,0.1);
-  overflow:hidden;
-}
-.battle-hp-fill { height:100%; border-radius:6px; transition:width 0.6s cubic-bezier(.34,1.2,.64,1); }
-.boss-hp-fill   { background:linear-gradient(90deg,#7f1d1d,#ef4444,#ff8c3a); }
-.princess-hp-fill { background:linear-gradient(90deg,#831843,#ff5fa0,#c85af5); }
-.battle-hp-num  { font-family:var(--font-num); font-size:11px; color:rgba(255,255,255,0.45); }
-
-/* ── 信息条 ── */
-.battle-info-strip {
-  width:100%; padding:6px 14px; flex-shrink:0;
-  display:flex; flex-direction:column; gap:7px;
-  position:relative; z-index:2;
-}
-.battle-princess-mini { width:100%; }
+/* ── 战斗日志 ── */
 .battle-log-box {
-  padding:9px 14px;
+  width:100%; padding:8px 14px; flex-shrink:0;
   background:rgba(255,255,255,0.05);
   border:1.5px solid rgba(255,255,255,0.1);
-  border-radius:12px;
-  font-size:13px; color:rgba(255,255,255,0.88);
-  line-height:1.5; min-height:40px; text-align:center;
-  transition:color 0.3s;
+  border-radius:12px; margin:6px 0 2px;
+  font-size:24px; color:rgba(255,255,255,0.88);
+  line-height:1.5; text-align:center;
+  transition:color 0.3s; position:relative; z-index:2;
+  box-sizing:border-box;
 }
 
 /* ── 回合条 ── */
 .battle-turn-bar {
   width:100%; text-align:center; flex-shrink:0;
-  padding:2px 0 3px; position:relative; z-index:2;
+  padding:2px 0 4px; position:relative; z-index:2;
 }
 #battle-turn-text {
   display:inline-block; padding:3px 16px;
   border-radius:var(--r-pill);
   background:rgba(255,255,255,0.07);
   border:1.5px solid rgba(255,255,255,0.12);
-  font-size:12px; font-weight:bold; color:rgba(255,255,255,0.5);
+  font-size:22px; font-weight:bold; color:rgba(255,255,255,0.5);
   letter-spacing:1px;
 }
 #battle-turn-text.player-turn {
@@ -1313,12 +1355,11 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 /* ── 行动区 ── */
 .battle-actions-wrap {
   flex:1; width:100%; overflow-y:auto; padding:4px 12px 10px;
-  position:relative; z-index:2;
-  scrollbar-width:none;
+  position:relative; z-index:2; scrollbar-width:none;
 }
 .battle-actions-wrap::-webkit-scrollbar { display:none; }
 .battle-section-title {
-  font-size:11px; font-weight:bold; color:rgba(255,255,255,0.3);
+  font-size:20px; font-weight:bold; color:rgba(255,255,255,0.3);
   text-align:center; margin-bottom:6px; letter-spacing:2px;
 }
 .battle-actions { display:flex; flex-direction:column; gap:6px; }
@@ -1336,12 +1377,12 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .battle-btn:active { transform:scale(0.97); background:rgba(255,255,255,0.12); }
 .battle-btn.used-up { opacity:0.25; pointer-events:none; }
 .battle-btn.boss-turn-lock { opacity:0.4; pointer-events:none; }
-.battle-btn .bb-icon { font-size:26px; flex-shrink:0; line-height:1; }
+.battle-btn .bb-icon { font-size:52px; flex-shrink:0; line-height:1; }
 .battle-btn .bb-body  { flex:1; min-width:0; }
-.battle-btn .bb-name  { font-size:13px; font-weight:bold; color:#fff; }
-.battle-btn .bb-desc  { font-size:10px; color:rgba(255,255,255,0.4); margin-top:1px; }
+.battle-btn .bb-name  { font-size:26px; font-weight:bold; color:#fff; }
+.battle-btn .bb-desc  { font-size:20px; color:rgba(255,255,255,0.4); margin-top:1px; }
 .battle-btn .bb-power {
-  font-family:var(--font-num); font-size:18px; font-weight:900; flex-shrink:0;
+  font-family:var(--font-num); font-size:36px; font-weight:900; flex-shrink:0;
   min-width:44px; text-align:right;
 }
 /* Type colours */
@@ -1362,7 +1403,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 }
 .dmg-float {
   position:fixed; font-family:var(--font-num); font-weight:900;
-  font-size:32px; pointer-events:none; z-index:999; letter-spacing:-1px;
+  font-size:64px; pointer-events:none; z-index:999; letter-spacing:-1px;
   animation:floatUp 1s ease-out forwards;
 }
 
@@ -1381,7 +1422,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   margin-top:max(36px, env(safe-area-inset-top, 36px));
 }
 .chall-realm-name {
-  font-family:var(--font-body); font-size:13px; font-weight:bold;
+  font-family:var(--font-body); font-size:26px; font-weight:bold;
   color:var(--c-text); flex:1;
   overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   background:#fff; border:2px solid var(--outline);
@@ -1409,7 +1450,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 .timer-text {
   position:absolute; inset:0;
   display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-num); font-size:13px; font-weight:900;
+  font-family:var(--font-num); font-size:26px; font-weight:900;
   color:var(--c-text);
 }
 
@@ -1423,7 +1464,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 }
 .q-type-badge {
   display:inline-flex; align-items:center; gap:5px;
-  padding:4px 12px; border-radius:var(--r-pill); font-size:11px; font-weight:bold;
+  padding:4px 12px; border-radius:var(--r-pill); font-size:22px; font-weight:bold;
   margin-bottom:9px; flex-shrink:0;
   align-self:flex-start;
   border:2.5px solid var(--outline);
@@ -1438,9 +1479,9 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   display:flex; flex-direction:column; align-items:center; gap:7px;
   box-shadow: var(--sh-card);
 }
-.q-banner-art { font-size:clamp(48px,14vw,72px); line-height:1; }
+.q-banner-art { font-size:clamp(96px,14vw,144px); line-height:1; }
 .q-banner-text {
-  font-size:clamp(13px,3.8vw,17px);
+  font-size:clamp(26px,3.8vw,34px);
   color:var(--c-text); line-height:1.7; text-align:center;
 }
 .q-banner-text .em { color:var(--c-orange); font-weight:bold; -webkit-text-stroke:0.5px var(--outline); }
@@ -1452,7 +1493,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   border:3px solid rgba(61,42,94,0.25);
   border-radius:var(--r-lg);
   padding:12px 14px;
-  font-family:var(--font-body); font-size:clamp(13px,3.8vw,16px);
+  font-family:var(--font-body); font-size:clamp(26px,3.8vw,32px);
   color:var(--c-text); text-align:left; line-height:1.5;
   transition:all 0.15s cubic-bezier(.34,1.56,.64,1);
   display:flex; align-items:center; gap:10px;
@@ -1480,11 +1521,11 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   width:26px; height:26px; border-radius:50%;
   background:#f5eeff; border:2px solid var(--outline);
   display:flex; align-items:center; justify-content:center;
-  font-size:11px; flex-shrink:0; font-weight:bold; color:var(--c-purple);
+  font-size:22px; flex-shrink:0; font-weight:bold; color:var(--c-purple);
 }
 .q-feedback {
   margin-top:9px; padding:11px 14px;
-  border-radius:var(--r-lg); font-size:13px; text-align:center;
+  border-radius:var(--r-lg); font-size:26px; text-align:center;
   display:none; line-height:1.6; flex-shrink:0;
   border:3px solid; box-shadow:3px 3px 0;
 }
@@ -1505,7 +1546,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   display:none; width:100%; margin-top:10px;
   padding:13px; border-radius:var(--r-lg);
   background:linear-gradient(135deg,#ff5fa0,#c85af5);
-  color:#fff; font-size:15px; letter-spacing:2px; font-weight:bold;
+  color:#fff; font-size:30px; letter-spacing:2px; font-weight:bold;
   border:3px solid var(--outline);
   box-shadow: var(--sh-purple);
   transition:all 0.15s cubic-bezier(.34,1.56,.64,1);
@@ -1535,22 +1576,22 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   box-shadow:6px 6px 0 var(--outline);
 }
 @keyframes resultIn { from{opacity:0;transform:scale(0.8) rotate(-3deg)} to{opacity:1;transform:scale(1) rotate(0deg)} }
-.result-emoji { font-size:78px; display:block; margin-bottom:10px; animation:comicFloat 2s ease-in-out infinite; }
-.result-title { font-family:var(--font-title); font-size:26px; margin-bottom:7px; -webkit-text-stroke:1px var(--outline); }
+.result-emoji { font-size:156px; display:block; margin-bottom:10px; animation:comicFloat 2s ease-in-out infinite; }
+.result-title { font-family:var(--font-title); font-size:52px; margin-bottom:7px; -webkit-text-stroke:1px var(--outline); }
 .result-title.win  { color:var(--c-yellow); text-shadow:2px 2px 0 #c88a00; }
 .result-title.lose { color:var(--c-red);    text-shadow:2px 2px 0 #b52030; }
-.result-desc { font-size:13px; color:var(--c-text2); line-height:1.8; margin-bottom:14px; }
+.result-desc { font-size:26px; color:var(--c-text2); line-height:1.8; margin-bottom:14px; }
 .result-rewards { display:flex; gap:8px; justify-content:center; margin-bottom:18px; flex-wrap:wrap; }
 .reward-chip {
   display:flex; align-items:center; gap:5px;
   background:#fff; border:2.5px solid var(--outline);
-  border-radius:var(--r-pill); padding:6px 12px; font-size:12px;
+  border-radius:var(--r-pill); padding:6px 12px; font-size:24px;
   box-shadow:2px 2px 0 var(--outline); font-weight:bold; color:var(--c-text);
 }
 .result-btn {
   width:100%; padding:13px; border-radius:var(--r-lg);
   background:linear-gradient(135deg,#ff5fa0,#c85af5);
-  color:#fff; font-size:15px; letter-spacing:2px; font-weight:bold;
+  color:#fff; font-size:30px; letter-spacing:2px; font-weight:bold;
   border:3px solid var(--outline);
   box-shadow: var(--sh-purple);
   transition:all 0.15s;
@@ -1593,7 +1634,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
   background:#fff;
   border:3px solid var(--outline);
   border-radius:var(--r-pill); padding:9px 18px;
-  font-size:12px; color:var(--c-text); white-space:nowrap; font-weight:bold;
+  font-size:24px; color:var(--c-text); white-space:nowrap; font-weight:bold;
   z-index:100; pointer-events:none;
   box-shadow:3px 3px 0 var(--outline);
   animation:toastAnim 2.8s ease forwards;
@@ -1642,7 +1683,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
     <!-- 角落编号 -->
     <div id="comic-num" style="
       position:absolute;top:12px;left:16px;
-      font-family:var(--font-num);font-size:18px;font-weight:900;
+      font-family:var(--font-num);font-size:36px;font-weight:900;
       color:var(--c-purple);
     "></div>
     <!-- 进度点 -->
@@ -1652,12 +1693,12 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
     "></div>
     <!-- 场景 emoji -->
     <div id="comic-scene" style="
-      font-size:80px;line-height:1;margin:10px 0 16px;
+      font-size:160px;line-height:1;margin:10px 0 16px;
       animation:comicFloat 2.5s ease-in-out infinite;
     "></div>
     <!-- 文字 -->
     <div id="comic-body" style="
-      font-size:16px;line-height:1.8;text-align:center;
+      font-size:32px;line-height:1.8;text-align:center;
       color:var(--c-text);margin-bottom:22px;
     "></div>
     <!-- 按钮 -->
@@ -1666,7 +1707,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
       background:linear-gradient(160deg,#ff5fa0,#c85af5);
       border:3px solid var(--outline);
       border-radius:var(--r-pill);
-      color:#fff;font-size:16px;font-weight:bold;letter-spacing:2px;
+      color:#fff;font-size:32px;font-weight:bold;letter-spacing:2px;
       box-shadow:3px 3px 0 var(--outline);
       transition:transform 0.12s;
     " onclick="nextComicPanel()"></button>
@@ -1684,15 +1725,16 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
       <span id="equipped-gem-icon">💠</span>
       <span id="equipped-gem-name">空灵晶石</span>
     </div>
+    <button onclick="if(confirm('确定要重置游戏吗？所有进度将清除！')){resetGame();}" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;color:rgba(255,255,255,0.4);font-size:18px;padding:4px 8px;cursor:pointer;">🔄</button>
   </div>
 
   <div class="princess-stage" id="princess-stage">
 
     <!-- Weapon left -->
     <div class="weapon-float" id="weapon-float">
-      <div class="weapon-icon" id="weapon-icon" onclick="openPicker('weapon')">⚔️</div>
+      <div class="weapon-icon" id="weapon-icon" onclick="showWeaponLocked()">⚔️</div>
       <div class="weapon-name" id="weapon-name">水晶剑</div>
-      <button class="replace-btn" onclick="openPicker('weapon')">更换武器</button>
+      <button class="replace-btn" onclick="showWeaponLocked()">更换武器</button>
     </div>
 
     <!-- Princess center — speech bubble + full-body SVG -->
@@ -1792,7 +1834,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
       <button class="half-sheet-close" onclick="closeHalfSheet('bag')">✕</button>
     </div>
     <div class="half-sheet-body">
-      <div style="font-size:13px;color:var(--c-text2);margin-bottom:10px;text-align:center;font-weight:bold" id="bag-count-label">装备收集 0 / 15</div>
+      <div style="font-size:26px;color:var(--c-text2);margin-bottom:10px;text-align:center;font-weight:bold" id="bag-count-label">装备收集 0 / 15</div>
       <div class="bag-grid" id="bag-grid"></div>
     </div>
   </div>
@@ -1809,7 +1851,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
       <button class="half-sheet-close" onclick="closeHalfSheet('cards')">✕</button>
     </div>
     <div class="half-sheet-body">
-      <div style="font-size:12px;color:var(--c-text2);margin-bottom:10px;text-align:center;font-weight:bold">收集守关BOSS卡牌，升至3级可获得专属宝石✨</div>
+      <div style="font-size:24px;color:var(--c-text2);margin-bottom:10px;text-align:center;font-weight:bold">收集守关BOSS卡牌，升至3级可获得专属宝石✨</div>
       <div class="cards-grid" id="cards-grid"></div>
     </div>
   </div>
@@ -1826,7 +1868,7 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 ================================================ -->
 <div id="screen-adventure" class="screen">
   <div class="adv-header">
-    <button onclick="showScreen('main')" style="background:linear-gradient(135deg,#fff6e8,#ffe8c8);border:3px solid var(--outline);border-radius:var(--r-pill);padding:7px 18px;font-size:15px;font-weight:bold;color:var(--c-text);box-shadow:3px 3px 0 var(--outline);flex-shrink:0;" onpointerdown="this.style.transform='translate(2px,2px)';this.style.boxShadow='1px 1px 0 var(--outline)'" onpointerup="this.style.transform='';this.style.boxShadow='3px 3px 0 var(--outline)'">返回</button>
+    <button onclick="showScreen('main')" style="background:linear-gradient(135deg,#fff6e8,#ffe8c8);border:3px solid var(--outline);border-radius:var(--r-pill);padding:7px 18px;font-size:30px;font-weight:bold;color:var(--c-text);box-shadow:3px 3px 0 var(--outline);flex-shrink:0;" onpointerdown="this.style.transform='translate(2px,2px)';this.style.boxShadow='1px 1px 0 var(--outline)'" onpointerup="this.style.transform='';this.style.boxShadow='3px 3px 0 var(--outline)'">返回</button>
     <div class="adv-title">🗺️ 冲冲秘境</div>
   </div>
   <div class="realm-scroll" id="realm-scroll"></div>
@@ -1866,35 +1908,55 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
     <div style="width:48px"></div>
   </div>
 
-  <!-- BOSS区域 -->
-  <div class="battle-boss-area">
-    <div class="battle-boss-halo" id="battle-boss-halo"></div>
-    <div class="battle-boss-icon" id="battle-boss-icon">👹</div>
-    <div class="battle-boss-name" id="battle-boss-name">地狱三角犬</div>
-    <div class="battle-hp-bar-wrap" style="padding:0 16px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-        <span class="battle-hp-label">👹 BOSS血量</span>
-        <span class="battle-hp-num" id="boss-hp-num">500 / 500</span>
-      </div>
-      <div class="battle-hp-track">
-        <div class="battle-hp-fill boss-hp-fill" id="boss-hp-fill" style="width:100%"></div>
-      </div>
-    </div>
-  </div>
+  <!-- 主战斗舞台：左右布局 -->
+  <div class="battle-stage">
 
-  <!-- 战斗信息条 -->
-  <div class="battle-info-strip">
-    <div class="battle-princess-mini">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
-        <span class="battle-hp-label">💗 公主血量</span>
-        <span class="battle-hp-num" id="princess-hp-num">200 / 200</span>
+    <!-- 左：公主 -->
+    <div class="battle-side-princess">
+      <!-- 公主血条（在上） -->
+      <div class="battle-hp-block">
+        <div class="battle-hp-label">
+          <span>💗 公主</span>
+          <span class="battle-hp-num" id="princess-hp-num">200/200</span>
+        </div>
+        <div class="battle-hp-track">
+          <div class="battle-hp-fill princess-hp-fill" id="princess-hp-fill" style="width:100%"></div>
+        </div>
       </div>
-      <div class="battle-hp-track">
-        <div class="battle-hp-fill princess-hp-fill" id="princess-hp-fill" style="width:100%"></div>
-      </div>
+      <!-- 公主形象 -->
+      <div class="battle-char-icon" id="battle-princess-icon">👸</div>
+      <div class="battle-char-label princess-label">满满公主</div>
     </div>
-    <div class="battle-log-box" id="battle-log">准备战斗！选择下方行动攻击BOSS！</div>
-  </div>
+
+    <!-- 中间 VS -->
+    <div class="battle-vs">
+      <div class="battle-vs-text">VS</div>
+    </div>
+
+    <!-- 右：BOSS -->
+    <div class="battle-side-boss">
+      <!-- BOSS血条（在上） -->
+      <div class="battle-hp-block">
+        <div class="battle-hp-label">
+          <span>💀 BOSS</span>
+          <span class="battle-hp-num" id="boss-hp-num">500/500</span>
+        </div>
+        <div class="battle-hp-track">
+          <div class="battle-hp-fill boss-hp-fill" id="boss-hp-fill" style="width:100%"></div>
+        </div>
+      </div>
+      <!-- BOSS 光晕 + 形象 -->
+      <div style="position:relative;display:flex;align-items:center;justify-content:center">
+        <div class="battle-boss-halo"></div>
+        <div class="battle-boss-icon" id="battle-boss-icon">👹</div>
+      </div>
+      <div class="battle-char-label boss-label" id="battle-boss-name">地狱三角犬</div>
+    </div>
+
+  </div><!-- /battle-stage -->
+
+  <!-- 战斗日志 -->
+  <div class="battle-log-box" id="battle-log" style="margin:6px 12px 0;width:calc(100% - 24px)">准备战斗！选择下方攻击方式！</div>
 
   <!-- 回合提示 -->
   <div class="battle-turn-bar" id="battle-turn-bar">
@@ -1924,11 +1986,11 @@ button { font-family: var(--font-body); cursor:pointer; border:none; background:
 <!-- Battle quiz confirm -->
 <div class="simple-alert-overlay" id="battle-quiz-overlay" style="align-items:center;padding:0 16px">
   <div class="simple-alert-box" style="width:100%;max-width:360px;padding:20px 18px">
-    <div id="bq-type-badge" style="display:inline-block;padding:2px 10px;border-radius:99px;font-size:11px;font-weight:bold;margin-bottom:10px;border:2px solid"></div>
-    <div id="bq-art" style="font-size:40px;margin-bottom:6px"></div>
-    <div id="bq-text" style="font-size:14px;line-height:1.6;color:var(--c-text);margin-bottom:14px;text-align:left"></div>
+    <div id="bq-type-badge" style="display:inline-block;padding:2px 10px;border-radius:99px;font-size:22px;font-weight:bold;margin-bottom:10px;border:2px solid"></div>
+    <div id="bq-art" style="font-size:80px;margin-bottom:6px"></div>
+    <div id="bq-text" style="font-size:28px;line-height:1.6;color:var(--c-text);margin-bottom:14px;text-align:left"></div>
     <div id="bq-opts" style="display:flex;flex-direction:column;gap:8px"></div>
-    <div id="bq-feedback" style="margin-top:10px;font-size:13px;font-weight:bold;text-align:center;min-height:20px"></div>
+    <div id="bq-feedback" style="margin-top:10px;font-size:26px;font-weight:bold;text-align:center;min-height:20px"></div>
   </div>
 </div>
 
@@ -2021,22 +2083,22 @@ const GEMS = [
 
 // 15 equipment items
 const EQUIPMENT = [
-  { id:'e1', icon:'🛡️', name:'水晶盾', rarity:'普通', color:'#9ca3af', story:'由水晶王国工匠用纯净水晶打造，据说能反射邪恶的目光。', atk:5, def:20 },
-  { id:'e2', icon:'🦺', name:'龙鳞护甲', rarity:'稀有', color:'#f97316', story:'从古老火龙身上自然脱落的鳞片编制而成，坚不可摧。', atk:8, def:35 },
-  { id:'e3', icon:'👑', name:'星光王冠', rarity:'史诗', color:'#fbbf24', story:'集齐七颗星光，由仙后亲手铸造，佩戴者智慧大增。', atk:15, def:15 },
-  { id:'e4', icon:'💍', name:'时间戒指', rarity:'稀有', color:'#a78bfa', story:'据说是时间魔法师遗留的宝物，能让时间短暂停止。', atk:10, def:10 },
-  { id:'e5', icon:'🧣', name:'风之披风', rarity:'普通', color:'#9ca3af', story:'用北风精灵的丝线织就，穿上它如风一般轻盈。', atk:3, def:12 },
-  { id:'e6', icon:'🥾', name:'雷霆战靴', rarity:'稀有', color:'#60a5fa', story:'雷神遗落的神靴，踏步时会发出雷鸣之声。', atk:12, def:8 },
-  { id:'e7', icon:'🧤', name:'冰晶手套', rarity:'普通', color:'#9ca3af', story:'永不融化的寒冰铸造，触碰便结冰的魔法手套。', atk:7, def:18 },
-  { id:'e8', icon:'🧿', name:'守护护符', rarity:'史诗', color:'#fbbf24', story:'水晶王国守护神赐予的圣物，能驱散一切黑暗。', atk:5, def:40 },
-  { id:'e9', icon:'🎀', name:'魔法发带', rarity:'普通', color:'#9ca3af', story:'魔法少女的标配，佩戴者魔力值上升10%。', atk:4, def:6 },
-  { id:'e10', icon:'🌟', name:'流星徽章', rarity:'稀有', color:'#f97316', story:'一颗流星坠落后凝固而成，蕴含宇宙的能量。', atk:18, def:5 },
-  { id:'e11', icon:'🔮', name:'预言水晶球', rarity:'史诗', color:'#fbbf24', story:'能预见未来危险，让持有者永远先行一步。', atk:20, def:20 },
-  { id:'e12', icon:'🪶', name:'凤凰羽毛', rarity:'稀有', color:'#f97316', story:'涅槃凤凰脱落的金色羽毛，带来不死之力。', atk:22, def:12 },
-  { id:'e13', icon:'🌈', name:'彩虹碎片', rarity:'普通', color:'#9ca3af', story:'彩虹消散后留下的神奇碎片，七色光芒闪烁。', atk:6, def:14 },
-  { id:'e14', icon:'❄️', name:'永冻雪花', rarity:'稀有', color:'#60a5fa', story:'来自极北雪山的永恒雪花，触碰即结冰。', atk:16, def:16 },
-  { id:'e15', icon:'🦋', name:'蝶梦翅膀', rarity:'史诗', color:'#fbbf24', story:'蝴蝶女神赐予的翅膀，能在梦境与现实间穿梭。', atk:25, def:25 },
-];
+  { id:'e1',  icon:'🛡️', name:'水晶盾',    rarity:'普通', color:'#9ca3af', story:'由水晶王国工匠用纯净水晶打造，据说能反射邪恶的目光。', atk:25, def:20 },
+  { id:'e2',  icon:'🦺', name:'龙鳞护甲',  rarity:'稀有', color:'#f97316', story:'从古老火龙身上自然脱落的鳞片编制而成，坚不可摧。', atk:30, def:35 },
+  { id:'e3',  icon:'👑', name:'星光王冠',  rarity:'史诗', color:'#fbbf24', story:'集齐七颗星光，由仙后亲手铸造，佩戴者智慧大增。', atk:35, def:15 },
+  { id:'e4',  icon:'💍', name:'时间戒指',  rarity:'稀有', color:'#a78bfa', story:'据说是时间魔法师遗留的宝物，能让时间短暂停止。', atk:28, def:10 },
+  { id:'e5',  icon:'🧣', name:'风之披风',  rarity:'普通', color:'#9ca3af', story:'用北风精灵的丝线织就，穿上它如风一般轻盈。', atk:26, def:12 },
+  { id:'e6',  icon:'🥾', name:'雷霆战靴',  rarity:'稀有', color:'#60a5fa', story:'雷神遗落的神靴，踏步时会发出雷鸣之声。', atk:32, def:8  },
+  { id:'e7',  icon:'🧤', name:'冰晶手套',  rarity:'普通', color:'#9ca3af', story:'永不融化的寒冰铸造，触碰便结冰的魔法手套。', atk:27, def:18 },
+  { id:'e8',  icon:'🧿', name:'守护护符',  rarity:'稀有', color:'#a78bfa', story:'上古祭师刻下的守护符文，能抵挡黑暗诅咒。', atk:29, def:30 },
+  { id:'e9',  icon:'💜', name:'紫晶胸甲',  rarity:'史诗', color:'#fbbf24', story:'由千年紫晶矿石锻造，散发神秘的紫色光芒。', atk:38, def:22 },
+  { id:'e10', icon:'🔰', name:'英雄徽章',  rarity:'普通', color:'#9ca3af', story:'表彰英勇战士的荣誉徽章，佩戴者勇气倍增。', atk:25, def:15 },
+  { id:'e11', icon:'🔮', name:'预言水晶球',rarity:'史诗', color:'#fbbf24', story:'能预见未来危险，让持有者永远先行一步。', atk:36, def:20 },
+  { id:'e12', icon:'🪶', name:'凤凰羽毛',  rarity:'稀有', color:'#f97316', story:'涅槃凤凰脱落的金色羽毛，带来不死之力。', atk:33, def:12 },
+  { id:'e13', icon:'🌈', name:'彩虹碎片',  rarity:'普通', color:'#9ca3af', story:'彩虹消散后留下的神奇碎片，七色光芒闪烁。', atk:25, def:14 },
+  { id:'e14', icon:'❄️', name:'永冻雪花',  rarity:'稀有', color:'#60a5fa', story:'来自极北雪山的永恒雪花，触碰即结冰。', atk:31, def:16 },
+  { id:'e15', icon:'🦋', name:'蝶梦翅膀',  rarity:'史诗', color:'#fbbf24', story:'蝴蝶女神赐予的翅膀，能在梦境与现实间穿梭。', atk:40, def:25 },
+]
 
 // BOSS cards (9 realms + hell tower)
 const BOSS_CARDS = [
@@ -2611,6 +2673,318 @@ const QUESTION_BANKS = {
       opts:['会唱歌的城门🎵','能飞翔的塔楼🪁','会变颜色的墙壁🎨','有传送门的地下室🚪'], ans:-1, ok:'🏰 你的城堡一定是全王国最美的！', no:'' },
   ],
   // 地狱之塔专属题库
+  // ── 关卡1-3：4-5岁（r0/r1/r2）数学启蒙 + 生活常识 + 心态教育 ──
+  lv1: [
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍎', text:'小明有 <em>23</em> 个苹果，妈妈又给了他 <em>15</em> 个，他现在有几个苹果？', opts:['36个','38个','40个','42个'], ans:1, ok:'🍎 23+15=38，答对啦！', no:'23加15，个位3+5=8，十位2+1=3，等于38！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🐥', text:'草地上有 <em>46</em> 只小鸡，走了 <em>18</em> 只，还剩几只？', opts:['26只','28只','30只','32只'], ans:1, ok:'🐥 46-18=28，正确！', no:'46减18：先减10得36，再减8得28！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍬', text:'盘子里有 <em>37</em> 颗糖，又放进去 <em>25</em> 颗，一共有几颗？', opts:['58颗','60颗','62颗','64颗'], ans:2, ok:'🍬 37+25=62，答对了！', no:'37+25：7+5=12，进1；3+2+1=6，等于62！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🐟', text:'水族馆有 <em>85</em> 条鱼，卖出了 <em>37</em> 条，还剩几条？', opts:['44条','46条','48条','50条'], ans:2, ok:'🐟 85-37=48，正确！', no:'85减37：5-7不够，借1变15-7=8，7-3-1=4，等于48！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌸', text:'花店有 <em>124</em> 朵花，今天卖出了 <em>56</em> 朵，还剩几朵？', opts:['66朵','68朵','70朵','72朵'], ans:1, ok:'🌸 124-56=68，正确！', no:'124减56：个位4-6借位14-6=8，十位1-5借位11-5=6，百位0！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🚗', text:'停车场上午有 <em>68</em> 辆车，又开来了 <em>47</em> 辆，共有几辆？', opts:['105辆','110辆','115辆','120辆'], ans:2, ok:'🚗 68+47=115，答对啦！', no:'68+47：8+7=15，进1；6+4+1=11，所以是115！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎈', text:'学校有 <em>213</em> 个气球，用了 <em>78</em> 个，还剩几个？', opts:['125个','130个','135个','140个'], ans:2, ok:'🎈 213-78=135，太棒了！', no:'213-78：个位3-8借位13-8=5，十位0-7借位10-7=3，百位2-1=1，等于135！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌙', text:'晚上天黑了，我们应该做什么？', opts:['继续在外面玩','刷牙洗脸准备睡觉','看一整夜电视','大声唱歌'], ans:1, ok:'🌙 对！晚上要好好睡觉，长高高！', no:'晚上要刷牙洗脸，好好休息哦！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🍽️', text:'饭前饭后我们要做什么？', opts:['玩手机','洗手','睡觉','跑步'], ans:1, ok:'👏 对！饭前饭后要洗手，讲卫生！', no:'饭前饭后要洗手，保持卫生哦！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🚦', text:'红绿灯变红色了，我们应该怎么做？', opts:['快快跑过去','停下来等待','往回走','闭上眼睛'], ans:1, ok:'🚦 对！红灯停，绿灯行，很安全！', no:'红灯要停下来等，绿灯才能走！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🦷', text:'我们每天要刷几次牙？', opts:['1次','2次','3次','不用刷'], ans:1, ok:'🦷 对！早晚各刷一次，保护小牙齿！', no:'每天早晚各刷一次牙，共2次！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'☀️', text:'早上太阳从哪边升起来？', opts:['西边','东边','南边','北边'], ans:1, ok:'☀️ 对！太阳从东边升起，西边落下！', no:'太阳是从东边升起的！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'😢', text:'你摔倒了，膝盖有点疼，你会怎么做？', opts:['一直哭不起来','自己爬起来继续玩','生气踢地板','叫别人背你'], ans:1, ok:'💪 对！勇敢的孩子摔倒了自己爬起来！', no:'勇敢的小朋友会自己爬起来继续玩哦！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🎁', text:'你的好朋友生日，你想送给他什么？', opts:['把他最喜欢的玩具抢走','用心做一张生日卡片','什么都不送','让他请你吃饭'], ans:1, ok:'🎁 太棒了！用心的礼物最珍贵！', no:'用心的礼物比买来的更有意义哦！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🍰', text:'妈妈只有一块蛋糕，但你和弟弟都想吃，怎么办？', opts:['全都自己吃','和弟弟分着吃','把蛋糕藏起来','扔掉蛋糕'], ans:1, ok:'🍰 真棒！分享是最美好的事情！', no:'和弟弟分着吃，大家都开心！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🌈', text:'下雨了不能出去玩，你感到有点难过，这时候最好怎么做？', opts:['一直哭闹','在家里玩玩具或画画','一直发脾气','什么都不做'], ans:1, ok:'🌈 对！换个方式玩，也会很开心的！', no:'下雨在家玩玩具或画画，也很有趣哦！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌱', text:'植物要健康生长，最需要什么？', opts:['糖果','阳光和水','玩具','音乐'], ans:1, ok:'🌱 对！阳光和水是植物的好朋友！', no:'植物需要阳光和水才能健康生长！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🐕', text:'下面哪种动物是宠物狗？', opts:['🦁狮子','🐕小狗','🐅老虎','🐻熊'], ans:1, ok:'🐕 对！小狗是常见的宠物！', no:'小狗是人类最忠实的宠物伙伴！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌟', text:'<em>138 + 57</em> = ？', opts:['185','193','195','197'], ans:2, ok:'🌟 138+57=195，正确！', no:'138+57：8+7=15进1，3+5+1=9，1+0=1，等于195！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🐣', text:'<em>200 - 73</em> = ？', opts:['117','127','137','147'], ans:1, ok:'🐣 200-73=127，正确！', no:'200-73：0-3借位10-3=7，9-7=2，1-0=1，等于127！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🤝', text:'小朋友有困难了，你应该怎么做？', opts:['假装没看见','嘲笑他','主动去帮助他','跑开'], ans:2, ok:'🤝 太棒了！帮助别人是很高尚的行为！', no:'当别人有困难时，我们要主动帮忙！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍊', text:'树上有 <em>54</em> 个橘子，摘了 <em>29</em> 个，还剩几个？', opts:['23个','25个','27个','29个'], ans:1, ok:'🍊 54-29=25，正确！', no:'54-29：4-9借位14-9=5，4-2-1=2，等于25！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🐠', text:'水族箱有 <em>43</em> 条红鱼和 <em>38</em> 条蓝鱼，一共几条？', opts:['79条','81条','83条','85条'], ans:1, ok:'🐠 43+38=81，答对啦！', no:'43+38：3+8=11，进1；4+3+1=8，等于81！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌻', text:'花坛里种了 <em>96</em> 朵向日葵，枯萎了 <em>38</em> 朵，还有几朵？', opts:['54朵','56朵','58朵','60朵'], ans:2, ok:'🌻 96-38=58，正确！', no:'96-38：6-8借位16-8=8，8-3-1=5，等于58！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍭', text:'糖果盒里有 <em>105</em> 颗糖，送给朋友 <em>47</em> 颗，还剩几颗？', opts:['56颗','58颗','60颗','62颗'], ans:1, ok:'🍭 105-47=58，正确！', no:'105-47：5-7借位15-7=8，0-4借位10-4=5，1-0-1=0，等于58！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🚌', text:'公交车上有 <em>67</em> 个人，上来了 <em>28</em> 个，现在有几个？', opts:['93人','95人','97人','99人'], ans:1, ok:'🚌 67+28=95，答对啦！', no:'67+28：7+8=15，进1；6+2+1=9，等于95！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎈', text:'仓库有 <em>130</em> 个气球，飞走了 <em>54</em> 个，还剩几个？', opts:['74个','76个','78个','80个'], ans:1, ok:'🎈 130-54=76，正确！', no:'130-54：0-4借位10-4=6，2-5借位12-5=7，0-0-1=0，等于76！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🐰', text:'农场有 <em>84</em> 只白兔和 <em>57</em> 只灰兔，共几只？', opts:['131只','139只','141只','143只'], ans:2, ok:'🐰 84+57=141，答对了！', no:'84+57：4+7=11，进1；8+5+1=14，等于141！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍩', text:'面包店有 <em>3</em> 箱甜甜圈，每箱 <em>24</em> 个，共几个？', opts:['62个','68个','72个','76个'], ans:2, ok:'🍩 3×24=72，答对了！', no:'3×24=3×20+3×4=60+12=72！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'⭐', text:'5个小组每组画 <em>23</em> 颗星星，共画了几颗？', opts:['105颗','110颗','115颗','120颗'], ans:2, ok:'⭐ 5×23=115，答对了！', no:'5×23=5×20+5×3=100+15=115！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🕐', text:'一节课 <em>40</em> 分钟，2节课加 <em>10</em> 分钟课间，共几分钟？', opts:['80分钟','85分钟','90分钟','95分钟'], ans:2, ok:'🕐 40×2+10=90，正确！', no:'2节课80分钟，加课间10分钟，共90分钟！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📅', text:'一个月有 <em>30</em> 天，已经过了 <em>18</em> 天，还剩几天？', opts:['10天','11天','12天','13天'], ans:2, ok:'📅 30-18=12，正确！', no:'30减18等于12天！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🧼', text:'洗手时需要用什么才能洗干净？', opts:['只用水','肥皂和水','牛奶','沙子'], ans:1, ok:'🧼 用肥皂和水才能洗掉细菌！', no:'洗手要用肥皂和水才能洗干净！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🥛', text:'牛奶从哪里来？', opts:['大树上','奶牛身体','地下','工厂机器'], ans:1, ok:'🐄 正确！牛奶是奶牛产的！', no:'牛奶是奶牛产出来的！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌡️', text:'发烧了应该怎么做？', opts:['继续玩耍','告诉爸爸妈妈去看医生','喝冷水','出去吹风'], ans:1, ok:'🏥 对！生病了要告诉大人去看医生！', no:'发烧了要告诉爸爸妈妈，去看医生！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🐦', text:'鸟儿用什么飞翔？', opts:['腿','翅膀','尾巴','嘴巴'], ans:1, ok:'🐦 对！鸟儿用翅膀飞翔！', no:'鸟儿扇动翅膀就能飞起来！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'❄️', text:'冬天从天上飘下来的白色东西叫什么？', opts:['雨','雹子','雪','露水'], ans:2, ok:'❄️ 对！冬天下的是雪！', no:'冬天从天上飘落的白色东西是雪！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌿', text:'树叶通常是什么颜色？', opts:['红色','蓝色','绿色','白色'], ans:2, ok:'🍃 对！大多数树叶是绿色的！', no:'大多数健康的树叶是绿色的！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🚑', text:'打急救电话应该拨哪个号码？', opts:['110','119','120','114'], ans:2, ok:'🚑 对！120是急救电话！', no:'有人需要急救时，要拨打120！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🔥', text:'发现火灾应该怎么做？', opts:['自己去灭火','跑出去叫大人或拨119','躲在屋里','继续玩耍'], ans:1, ok:'🚒 对！火灾要赶快逃出去叫大人！', no:'发现火灾要马上逃出去叫大人，或者拨打119！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'😤', text:'别人不小心碰了你，你应该怎么做？', opts:['马上还手','生气大哭','说"没关系"','去告诉老师'], ans:2, ok:'😊 对！说"没关系"，大度最棒！', no:'别人不小心碰到你，说声"没关系"就好！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🎨', text:'你画了一幅画觉得不好看，你会怎么做？', opts:['把画撕掉','继续练习，下次更好','再也不画画了','让别人帮你画'], ans:1, ok:'🎨 太棒了！坚持练习才能进步！', no:'画得不好没关系，多练习就会越来越好！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🚲', text:'学骑自行车，摔倒好几次，你会……', opts:['扔掉车不学了','哭着回家','爬起来继续尝试','让爸爸一直扶着'], ans:2, ok:'💪 对！坚持尝试，一定能学会！', no:'摔倒了爬起来继续，才能学会骑车！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🤗', text:'看到陌生小朋友一个人哭，你会……', opts:['假装没看见','嘲笑他','走过去问他怎么了','跑开'], ans:2, ok:'🤗 真棒！主动关心别人，你很善良！', no:'看到别人难过，主动关心是很暖心的！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🏅', text:'好朋友在运动会上得了第一，你会……', opts:['不理他','抢走他的奖牌','真心地祝贺他','说比赛不公平'], ans:2, ok:'🥇 真棒！为朋友感到高兴，很棒！', no:'为朋友的成功感到高兴，这是真正的友谊！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'💤', text:'晚上不想睡觉但明天要上学，你会……', opts:['偷偷玩手机到很晚','闭上眼睛努力入睡','和爸妈撒娇不睡','在床上哭'], ans:1, ok:'😴 对！早点睡觉才有精神上学！', no:'按时睡觉身体才会好，明天才有精神！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🎁', text:'收到礼物发现自己不喜欢，你会……', opts:['马上扔掉','当面说不好看','微笑说谢谢','大哭大闹'], ans:2, ok:'😊 对！感谢别人的心意才是礼貌！', no:'不管喜不喜欢，都要感谢别人的心意！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌈', text:'彩虹有几种颜色？', opts:['5种','6种','7种','8种'], ans:2, ok:'🌈 对！彩虹有红橙黄绿蓝靛紫7种颜色！', no:'彩虹有7种颜色：红橙黄绿蓝靛紫！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🐛', text:'毛毛虫长大后会变成什么？', opts:['蚂蚱','蜜蜂','蝴蝶','蜻蜓'], ans:2, ok:'🦋 对！毛毛虫最终会变成美丽的蝴蝶！', no:'毛毛虫经过结蛹，变成蝴蝶！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🥚', text:'鸡场有 <em>120</em> 个鸡蛋，卖出 <em>47</em> 个，还剩多少？', opts:['71个','73个','75个','77个'], ans:1, ok:'🥚 120-47=73，正确！', no:'120-47：0-7借位10-7=3，1-4借位11-4=7，0-0-1=0，等于73！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎒', text:'书包里有 <em>52</em> 本书，取出 <em>17</em> 本，还剩几本？', opts:['33本','35本','37本','39本'], ans:1, ok:'📚 52-17=35，正确！', no:'52-17=35！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍓', text:'草莓园有 <em>78</em> 颗草莓，摘了 <em>39</em> 颗，还剩几颗？', opts:['37颗','39颗','41颗','43颗'], ans:1, ok:'🍓 78-39=39！', no:'78-39=39！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🚀', text:'<em>63 + 49</em> = ？', opts:['108','110','112','114'], ans:2, ok:'🚀 63+49=112！', no:'63+49=112！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🏀', text:'篮球场原有 <em>145</em> 个球，拿走了 <em>68</em> 个，还剩几个？', opts:['75个','77个','79个','81个'], ans:1, ok:'🏀 145-68=77！', no:'145-68=77！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎵', text:'音乐课有 <em>34</em> 个女生和 <em>28</em> 个男生，共几人？', opts:['58人','60人','62人','64人'], ans:2, ok:'🎵 34+28=62！', no:'34+28=62！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌍', text:'图书馆有 <em>203</em> 本书，借出了 <em>84</em> 本，还剩几本？', opts:['117本','119本','121本','123本'], ans:1, ok:'📚 203-84=119！', no:'203-84=119！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎪', text:'第一场有 <em>176</em> 人，第二场有 <em>89</em> 人，共几人？', opts:['255人','261人','265人','271人'], ans:2, ok:'🎪 176+89=265！', no:'176+89=265！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🐕', text:'宠物店有 <em>97</em> 只小狗，卖出了 <em>48</em> 只，还剩几只？', opts:['45只','47只','49只','51只'], ans:2, ok:'🐕 97-48=49！', no:'97-48=49！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍦', text:'冰淇淋有 <em>4</em> 种口味，每种 <em>25</em> 个，共几个？', opts:['90个','95个','100个','105个'], ans:2, ok:'🍦 4×25=100！', no:'4×25=100！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌙', text:'<em>150 - 67</em> = ？', opts:['81','83','85','87'], ans:1, ok:'🌙 150-67=83！', no:'150-67=83！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎠', text:'上午 <em>286</em> 人，下午又来 <em>147</em> 人，共几人？', opts:['423人','427人','431人','433人'], ans:3, ok:'🎠 286+147=433！', no:'286+147=433！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🔢', text:'<em>500 - 238</em> = ？', opts:['252','260','262','270'], ans:2, ok:'✅ 500-238=262！', no:'500-238=262！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🚂', text:'火车有 <em>8</em> 节车厢，每节 <em>45</em> 个座位，共几个？', opts:['320个','340个','360个','380个'], ans:2, ok:'🚂 8×45=360！', no:'8×45=360！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'💐', text:'<em>417 - 189</em> = ？', opts:['218','226','228','230'], ans:2, ok:'✅ 417-189=228！', no:'417-189=228！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'💫', text:'<em>89 + 76</em> = ？', opts:['155','163','165','167'], ans:2, ok:'💫 89+76=165！', no:'89+76=165！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌺', text:'花园有 <em>5</em> 排玫瑰，每排 <em>18</em> 朵，共几朵？', opts:['80朵','85朵','90朵','95朵'], ans:2, ok:'🌺 5×18=90！', no:'5×18=90！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎯', text:'射击 <em>3</em> 轮，每轮 <em>35</em> 分，共几分？', opts:['95分','100分','105分','110分'], ans:2, ok:'🎯 3×35=105！', no:'3×35=105！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📦', text:'超市进了 <em>240</em> 瓶饮料，卖出 <em>167</em> 瓶，还剩几瓶？', opts:['63瓶','71瓶','73瓶','81瓶'], ans:2, ok:'📦 240-167=73！', no:'240-167=73！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🏗️', text:'用了 <em>328</em> 块砖，还剩 <em>174</em> 块，原来共几块？', opts:['492块','500块','502块','510块'], ans:2, ok:'🏗️ 328+174=502！', no:'328+174=502！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍉', text:'西瓜 <em>4</em> 千克，苹果 <em>2</em> 千克，合计重多少千克？', opts:['5千克','6千克','7千克','8千克'], ans:1, ok:'🍉 4+2=6千克！', no:'4+2=6！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍕', text:'<em>8 ÷ 2</em> = ？', opts:['2','3','4','5'], ans:2, ok:'✅ 8÷2=4！', no:'8除以2等于4！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌍', text:'我们居住的星球叫什么？', opts:['火星','金星','地球','木星'], ans:2, ok:'🌍 我们住在地球上！', no:'我们居住的星球叫地球！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌊', text:'地球上大多数是什么水？', opts:['淡水','海水（咸水）','矿泉水','雨水'], ans:1, ok:'🌊 地球97%是海水！', no:'地球上的水大部分是海水！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🐾', text:'猫用什么抓东西？', opts:['嘴巴','尾巴','爪子','耳朵'], ans:2, ok:'🐱 猫用爪子抓东西！', no:'猫有锋利的爪子！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌧️', text:'下雨是因为什么？', opts:['有人在天上倒水','水蒸气变水珠从云里落下','天上破了个洞','神仙在哭泣'], ans:1, ok:'☔ 水蒸气凝结变成雨！', no:'水蒸气上升冷却凝结，变成雨水落下！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'👁️', text:'我们用什么器官来看东西？', opts:['耳朵','鼻子','眼睛','嘴巴'], ans:2, ok:'👁️ 用眼睛来看东西！', no:'眼睛是视觉器官！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌡️', text:'人体正常体温大约是多少度？', opts:['35℃','36-37℃','38℃','40℃'], ans:1, ok:'🌡️ 人体正常体温约36-37℃！', no:'人体正常体温约为36-37℃！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🦷', text:'成人共有几颗牙齿？', opts:['28颗','30颗','32颗','36颗'], ans:2, ok:'🦷 成年人一般有32颗牙齿！', no:'成年人一般有28-32颗牙齿！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌙', text:'月亮有多少个？', opts:['0个','1个','2个','很多个'], ans:1, ok:'🌙 地球只有一个月亮！', no:'地球只有一个天然卫星——月亮！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🋋', text:'世界上最大的动物是什么？', opts:['非洲象','长颈鹿','蓝鲸','鲨鱼'], ans:2, ok:'🐋 蓝鲸是地球上最大的动物！', no:'蓝鲸体长可达30米，是最大的动物！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌞', text:'太阳从哪个方向落下？', opts:['东边','南边','西边','北边'], ans:2, ok:'🌅 太阳从西边落下！', no:'太阳东升西落！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🦁', text:'狮子是什么类动物？', opts:['鸟类','爬行类','哺乳类','鱼类'], ans:2, ok:'🦁 狮子是哺乳动物！', no:'狮子用肺呼吸，是哺乳动物！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'📱', text:'玩游戏忘记时间，错过了和朋友的约定，你会……', opts:['假装什么都没发生','向朋友道歉，以后要守时','责怪朋友来得太早','说游戏比较重要'], ans:1, ok:'😊 向朋友道歉，承认错误很重要！', no:'忘记约定要诚心道歉！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🌧️', text:'今天下雨不能去野餐，你会……', opts:['一直发脾气','想想在家可以做什么有趣的事','一直哭','什么都不做'], ans:1, ok:'🌈 换一种方式，在家也可以很开心！', no:'计划改变了，想想其他有趣的事情！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🎓', text:'作业做得很辛苦想要放弃，你会……', opts:['直接扔掉作业','休息一下再继续','让父母帮你做','全部乱写'], ans:1, ok:'💪 休息一下再继续，坚持完成最重要！', no:'累了可以稍微休息，然后继续坚持！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🧸', text:'弟弟妹妹弄坏了你的玩具，你会……', opts:['打他/她','大声骂他/她','虽然难过，但告诉他/她要小心','离家出走'], ans:2, ok:'😊 告诉他/她要小心，这才是好哥哥/姐姐！', no:'告诉他们要爱护东西，比发脾气更有效！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🚇', text:'坐地铁时应该怎么做？', opts:['大声唱歌','排队等候，让老人先上','抢着上车','玩游戏不管别人'], ans:1, ok:'🚇 排队礼让，遵守公共秩序！', no:'乘坐公共交通要排队，礼让老幼！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🙏', text:'接受别人帮助后，你应该……', opts:['假装没发生','说谢谢','要求更多帮助','不理对方'], ans:1, ok:'🙏 说谢谢，表达感谢很重要！', no:'别人帮助了你，一定要说谢谢！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🤔', text:'遇到不懂的题目，你应该……', opts:['直接放弃不做','抄别人答案','认真思考，不会就问老师','乱写一个答案'], ans:2, ok:'💡 认真思考，不会的问老师！', no:'遇到困难要先自己思考，再请教老师！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🌟', text:'第一次参加演讲，感到很紧张，你会……', opts:['临时不参加','深呼吸，告诉自己能行','大哭一场','找借口逃跑'], ans:1, ok:'🌟 深呼吸，鼓励自己，勇敢去做！', no:'紧张是正常的，深呼吸告诉自己能行！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🎨', text:'你的画被老师表扬了，你会……', opts:['骄傲地不理别人','谦虚说谢谢，继续努力','嘲笑画得不好的同学','停止画画'], ans:1, ok:'😊 谦虚接受表扬，继续努力！', no:'被表扬要谦虚感谢，同时继续努力！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'💌', text:'你说了一句伤害朋友的话，你应该……', opts:['假装没说过','向朋友真诚道歉','责怪朋友太敏感','找别的朋友玩'], ans:1, ok:'💌 真诚道歉是修复友谊的第一步！', no:'伤害了朋友要真诚道歉！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🌱', text:'别人说你的梦想不可能实现，你会……', opts:['马上放弃梦想','相信自己，继续努力','生气反驳','躲起来哭'], ans:1, ok:'💪 相信自己，坚持追梦！', no:'别人的否定不重要，坚持自己的梦想！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🌈', text:'彩虹有几种颜色？', opts:['5种','6种','7种','8种'], ans:2, ok:'🌈 彩虹有7种颜色：红橙黄绿蓝靛紫！', no:'彩虹七色：红橙黄绿蓝靛紫！' },
+    { type:'常识', typeCls:'science', typeColor:'#60a5fa', art:'🐛', text:'毛毛虫长大后会变成什么？', opts:['蚂蚱','蜜蜂','蝴蝶','蜻蜓'], ans:2, ok:'🦋 毛毛虫最终变成蝴蝶！', no:'毛毛虫经过结蛹，变成蝴蝶！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍒', text:'<em>256 + 137</em> = ？', opts:['381','391','393','403'], ans:2, ok:'✅ 256+137=393！', no:'256+137=393！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌠', text:'<em>301 - 145</em> = ？', opts:['154','156','158','166'], ans:1, ok:'✅ 301-145=156！', no:'301-145=156！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🦊', text:'动物园有 <em>47</em> 只兔子和 <em>38</em> 只狐狸，共几只？', opts:['83只','85只','87只','89只'], ans:1, ok:'✅ 47+38=85！', no:'47+38=85！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍒', text:'<em>256 + 137</em> = ？', opts:['381','391','393','403'], ans:2, ok:'✅ 256+137=393！', no:'256+137=393！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌠', text:'<em>301 - 145</em> = ？', opts:['154','156','158','166'], ans:1, ok:'✅ 301-145=156！', no:'301-145=156！' },
+  ],
+
+  // ── 关卡4-6：6-7岁（r3/r4/r5）自然常识 + 语文启蒙 ──
+  lv2: [
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍕', text:'一个披萨切成 <em>8</em> 块，吃了 <em>3</em> 块，还剩几块？', opts:['4块','5块','6块','3块'], ans:1, ok:'🍕 8-3=5，答对啦！', no:'8减3等于几？' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🐛', text:'<em>4 × 3</em> = ？', opts:['10','11','12','13'], ans:2, ok:'✅ 4×3=12，正确！', no:'4×3，4个3相加，等于12！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎯', text:'班级有 <em>24</em> 个同学，分成 <em>4</em> 组，每组几人？', opts:['5人','6人','7人','8人'], ans:1, ok:'🎯 24÷4=6，正确！', no:'24除以4，等于6！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🦋', text:'毛毛虫最终会变成什么？', opts:['蚂蚱','蝴蝶','蜜蜂','蜻蜓'], ans:1, ok:'🦋 对！毛毛虫→蛹→蝴蝶！', no:'毛毛虫经过结蛹，最终变成美丽的蝴蝶！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌊', text:'地球上面积最大的是什么？', opts:['陆地','沙漠','海洋','森林'], ans:2, ok:'🌊 对！海洋约占地球面积的71%！', no:'海洋占地球表面积约71%，比陆地大！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌡️', text:'水结冰需要温度降到几摄氏度以下？', opts:['10℃','5℃','0℃','-10℃'], ans:2, ok:'❄️ 对！0℃以下水会结冰！', no:'水在0摄氏度以下才会结成冰！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌳', text:'树木靠什么制造自己的食物？', opts:['吸收虫子','光合作用','喝雨水','吃泥土'], ans:1, ok:'🌿 对！植物通过光合作用制造养分！', no:'植物利用阳光、水和二氧化碳进行光合作用！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📖', text:'"大"字加一笔可以变成哪个字？', opts:['太','天','犬','夫'], ans:0, ok:'✅ 对！大字加一点变成"太"！', no:'"大"加一点变成"太"！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌸', text:'"春眠不觉晓"，这句诗描述的是哪个季节？', opts:['夏天','秋天','冬天','春天'], ans:3, ok:'🌸 对！"春眠"就是春天睡觉的意思！', no:'"春眠不觉晓"里的"春"字说明是春天！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'✏️', text:'下面哪个词是反义词对？', opts:['大-大','快-慢','跑-走','红-苹果'], ans:1, ok:'✅ 对！快和慢是反义词！', no:'快和慢意思相反，是反义词！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎵', text:'"床前明月光，疑是地上霜"，这句诗的作者是？', opts:['杜甫','白居易','李白','苏轼'], ans:2, ok:'🌙 对！这是李白的《静夜思》！', no:'这是唐代大诗人李白写的《静夜思》！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🐠', text:'鱼靠什么在水里呼吸？', opts:['肺','鼻子','鳃','皮肤'], ans:2, ok:'🐠 对！鱼用鳃来呼吸水中的氧气！', no:'鱼有鳃，可以从水中获取氧气！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌍', text:'一年有几个月？', opts:['10个','11个','12个','13个'], ans:2, ok:'📅 对！一年有12个月！', no:'一年共有12个月，你都知道吗？' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌺', text:'"笑"字的部首是什么？', opts:['水','竹','口','心'], ans:1, ok:'✅ 对！"笑"字的部首是竹字头！', no:'"笑"字上面的部分是竹字头！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'⏰', text:'一小时有多少分钟？', opts:['30分钟','45分钟','60分钟','100分钟'], ans:2, ok:'⏰ 对！1小时=60分钟！', no:'1小时等于60分钟！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🏆', text:'你在比赛中输了，你会怎么想？', opts:['再也不比赛了','都是别人的错','找找自己的不足，下次更好','不公平，耍赖'], ans:2, ok:'💪 对！输了要找原因，下次变得更强！', no:'失败是成功之母，找找原因下次更好！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌈', text:'彩虹一般在什么时候出现？', opts:['大风天','下雪后','雨后晴天','大雾天'], ans:2, ok:'🌈 对！雨后阳光照射水滴形成彩虹！', no:'彩虹通常在下雨后晴天，阳光照射水滴时出现！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🦁', text:'"守株待兔"这个成语告诉我们什么？', opts:['要耐心等待','不能不劳而获','兔子很聪明','农民很厉害'], ans:1, ok:'📚 对！守株待兔说明不能靠运气，要努力！', no:'守株待兔比喻不劳而获、坐等机会是不对的！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📐', text:'正方形有几条边？', opts:['3条','4条','5条','6条'], ans:1, ok:'📐 对！正方形有4条等长的边！', no:'正方形有4条边，每条边等长！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🐝', text:'蜜蜂对植物最重要的贡献是什么？', opts:['吃掉害虫','传播花粉','清洁叶子','浇水'], ans:1, ok:'🐝 对！蜜蜂采蜜时帮助植物传播花粉！', no:'蜜蜂在采蜜过程中帮助植物传播花粉，很重要！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍕', text:'<em>6 × 7</em> = ？', opts:['40','42','44','46'], ans:1, ok:'✅ 6×7=42，正确！', no:'6乘以7等于42！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📦', text:'48块积木平均分给 <em>6</em> 个小朋友，每人几块？', opts:['6块','7块','8块','9块'], ans:2, ok:'📦 48÷6=8，答对！', no:'48除以6等于8！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎒', text:'一本书有 <em>120</em> 页，读了 <em>45</em> 页，还剩多少页？', opts:['65页','70页','75页','80页'], ans:2, ok:'📚 120-45=75，正确！', no:'120减45等于75！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🛒', text:'妈妈买了 <em>3</em> 袋苹果，每袋 <em>8</em> 个，一共几个？', opts:['20个','22个','24个','26个'], ans:2, ok:'🍎 3×8=24，答对啦！', no:'3袋每袋8个，3×8=24！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'💴', text:'买玩具 <em>28</em> 元，付了 <em>50</em> 元，应找回多少元？', opts:['18元','20元','22元','24元'], ans:2, ok:'💰 50-28=22，答对啦！', no:'50减28等于22元！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍫', text:'一盒巧克力有 <em>5</em> 排，每排 <em>6</em> 块，共几块？', opts:['25块','28块','30块','33块'], ans:2, ok:'🍫 5×6=30，答对啦！', no:'5排每排6块，5×6=30！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🔷', text:'三角形有几条边？', opts:['2条','3条','4条','5条'], ans:1, ok:'🔺 对！三角形有3条边！', no:'三角形有3条边，3个角！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📐', text:'一个圆形有几条边？', opts:['0条','1条','2条','4条'], ans:1, ok:'⭕ 对！圆只有1条弯曲的边！', no:'圆只有一条封闭的曲线边！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌦️', text:'云是由什么组成的？', opts:['棉花','水蒸气遇冷变成的小水滴','白色气体','烟雾'], ans:1, ok:'☁️ 对！云是水蒸气凝结成的小水滴！', no:'云是水蒸气遇冷凝结成的无数小水滴！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🐧', text:'企鹅主要生活在哪里？', opts:['非洲','南极洲','亚洲','北美洲'], ans:1, ok:'🐧 对！野生企鹅主要生活在南极洲！', no:'企鹅主要生活在南极洲！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌵', text:'仙人掌生长在哪种环境？', opts:['寒冷的雪地','潮湿的雨林','干燥的沙漠','深深的海底'], ans:2, ok:'🌵 对！仙人掌适应干旱的沙漠环境！', no:'仙人掌耐旱，生长在干燥的沙漠中！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🐳', text:'下面哪种动物不是鱼？', opts:['金鱼','鲨鱼','鲸鱼','鲫鱼'], ans:2, ok:'🐳 对！鲸鱼是哺乳动物，不是鱼！', no:'鲸鱼是哺乳动物，用肺呼吸，不是鱼！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌙', text:'月亮绕地球转一圈大约需要多久？', opts:['1天','7天','1个月','1年'], ans:2, ok:'🌙 对！月亮绕地球约1个月转一圈！', no:'月亮绕地球公转周期约29天，大约1个月！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌱', text:'种子发芽需要哪些条件？', opts:['只需要土壤','水、适宜温度和空气','只需要阳光','只需要水'], ans:1, ok:'🌱 对！种子发芽需要水、温度和空气！', no:'种子发芽需要适量水分、适宜温度和空气！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🍁', text:'秋天树叶变黄是因为什么？', opts:['树叶渴了','叶绿素减少，其他颜色显现','天气太热','下了黄色的雨'], ans:1, ok:'🍂 对！秋天叶绿素减少，叶片变黄！', no:'秋天气温下降，叶绿素分解减少，其他色素显现！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🐝', text:'蜜蜂对植物最重要的贡献是什么？', opts:['吃掉害虫','传播花粉','清洁叶子','浇水'], ans:1, ok:'🐝 对！蜜蜂采蜜时帮助植物传播花粉！', no:'蜜蜂在采蜜过程中帮助植物传播花粉！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🐞', text:'瓢虫身上的斑点是什么颜色？', opts:['绿色','黑色','蓝色','紫色'], ans:1, ok:'🐞 对！瓢虫身上有黑色斑点！', no:'红色或黄色身体上有黑色圆斑，是瓢虫的特征！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌍', text:'中国的国宝动物是什么？', opts:['老虎','大熊猫','金丝猴','朱鹮'], ans:1, ok:'🐼 对！大熊猫是中国的国宝！', no:'大熊猫是中国特有的珍稀动物，是中国国宝！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📖', text:'"小荷才露尖尖角"，下一句是？', opts:['早有蜻蜓立上头','白鹭上青天','春风又绿江南岸','两岸猿声啼不住'], ans:0, ok:'✅ 对！"早有蜻蜓立上头"！', no:'"小荷才露尖尖角，早有蜻蜓立上头"！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'✍️', text:'"高兴"的近义词是哪个？', opts:['悲伤','难过','快乐','失望'], ans:2, ok:'😊 对！"快乐"和"高兴"意思相近！', no:'"快乐"和"高兴"意思相近，是近义词！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎭', text:'"狼来了"的故事告诉我们什么？', opts:['狼很危险','不能说谎，否则没人信','要勇敢','要帮助别人'], ans:1, ok:'📚 对！这个故事告诉我们不能说谎！', no:'多次说谎"狼来了"，最后真狼来了却没人信！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🔤', text:'"明"字是由哪两个字组成的？', opts:['日和月','火和木','山和水','人和土'], ans:0, ok:'✅ 对！"明"由"日"和"月"组成！', no:'"明"由"日"（太阳）和"月"（月亮）组成！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌸', text:'"咏鹅"是哪位诗人写的？', opts:['李白','杜甫','骆宾王','白居易'], ans:2, ok:'✅ 对！《咏鹅》是骆宾王七岁时写的！', no:'"鹅鹅鹅，曲项向天歌"是骆宾王七岁时写的！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎵', text:'"两岸青山相对出，孤帆一片日边来"描写的是哪里？', opts:['大海','湖泊','长江山水','沙漠'], ans:2, ok:'⛵ 对！这是李白描写长江山水的诗句！', no:'这是李白《望天门山》中描写长江美景的诗！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🏆', text:'"坚持不懈"的意思是？', opts:['放弃很快','做事不认真','持续努力不放弃','很厉害'], ans:2, ok:'✅ 对！坚持不懈就是持续努力不放弃！', no:'"坚持不懈"意思是持续努力、不放弃！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🦁', text:'"守株待兔"告诉我们什么？', opts:['要耐心等待','不能不劳而获','兔子很聪明','农民很厉害'], ans:1, ok:'📚 对！守株待兔说明不能靠运气！', no:'守株待兔比喻不劳而获、坐等机会是不对的！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'📚', text:'考试没考好，你会怎么做？', opts:['不想上学了','撕掉试卷','找出哪里错了认真改正','责怪老师'], ans:2, ok:'💪 对！找到问题认真改正，下次更好！', no:'考试没考好，要找出哪里出错，认真改正！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🤝', text:'和朋友发生争吵，你应该怎么处理？', opts:['再也不理他','打一架','冷静想想谁对谁错','让别人评判'], ans:2, ok:'😊 对！冷静思考，理性解决！', no:'冷静下来，想清楚事情经过，然后好好沟通！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌊', text:'"孟母三迁"说明了什么？', opts:['孟母爱搬家','环境对成长很重要','孟子不听话','住的地方越多越好'], ans:1, ok:'🏡 对！好的环境对成长非常重要！', no:'孟母三次搬家为孟子创造好的学习环境，说明环境很重要！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌈', text:'为什么雨后会出现彩虹？', opts:['天上有彩色的云','阳光照射水珠折射出七色光','下了彩色的雨','彩虹精灵出现了'], ans:1, ok:'🌈 对！阳光被水珠折射分成七种颜色！', no:'雨后空气中有许多小水滴，阳光照射折射出七色光！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📐', text:'长 <em>12</em> 米，宽 <em>8</em> 米，面积是多少？', opts:['88m²','96m²','100m²','104m²'], ans:1, ok:'📐 12×8=96m²！', no:'面积=长×宽=12×8=96！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎯', text:'<em>7 × 8</em> = ？', opts:['52','54','56','58'], ans:2, ok:'✅ 7×8=56！', no:'7乘以8等于56！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'💰', text:'存了 <em>365</em> 元，花了 <em>128</em> 元，还剩多少元？', opts:['235元','237元','239元','241元'], ans:1, ok:'💰 365-128=237！', no:'365-128=237！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'⏰', text:'<em>56 ÷ 7</em> = ？', opts:['6','7','8','9'], ans:2, ok:'✅ 56÷7=8！', no:'7×8=56，所以56÷7=8！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎪', text:'9个演员，每人表演 <em>6</em> 个节目，共几个节目？', opts:['48个','52个','54个','58个'], ans:2, ok:'🎪 9×6=54！', no:'9乘以6等于54！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍰', text:'蛋糕分给 <em>6</em> 个小朋友，每人 <em>7</em> 块，共几块？', opts:['36块','38块','40块','42块'], ans:3, ok:'🍰 6×7=42！', no:'6乘以7等于42！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📚', text:'一套书共 <em>9</em> 本，每本 <em>48</em> 页，共几页？', opts:['392页','412页','422页','432页'], ans:3, ok:'📚 9×48=432！', no:'9×48=9×40+9×8=360+72=432！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'⏰', text:'一天有多少分钟？', opts:['720分','1080分','1440分','1800分'], ans:2, ok:'⏰ 24×60=1440分钟！', no:'一天24小时，每小时60分，共1440分钟！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🚗', text:'每小时 <em>60</em> 千米，行驶 <em>3</em> 小时，共几千米？', opts:['150km','170km','180km','190km'], ans:2, ok:'🚗 60×3=180千米！', no:'速度×时间=路程，60×3=180！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎒', text:'486名学生，分成 <em>6</em> 个班，每班多少人？', opts:['79人','81人','83人','85人'], ans:1, ok:'🎒 486÷6=81！', no:'486除以6等于81！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌟', text:'<em>8 × 9</em> = ？', opts:['68','70','72','74'], ans:2, ok:'✅ 8×9=72！', no:'8乘以9等于72！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎠', text:'<em>72 ÷ 8</em> = ？', opts:['7','8','9','10'], ans:2, ok:'✅ 72÷8=9！', no:'8×9=72，所以72÷8=9！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🏗️', text:'工厂5天生产 <em>360</em> 个零件，每天几个？', opts:['62个','68个','72个','76个'], ans:2, ok:'🏗️ 360÷5=72！', no:'360除以5等于72！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎯', text:'一年级 <em>3</em> 个班，共 <em>108</em> 名学生，每班多少人？', opts:['34人','36人','38人','40人'], ans:1, ok:'🎯 108÷3=36！', no:'108除以3等于36！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌈', text:'<em>5 × 12</em> = ？', opts:['55','60','65','70'], ans:1, ok:'✅ 5×12=60！', no:'5乘以12等于60！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🍫', text:'<em>96 ÷ 8</em> = ？', opts:['10','11','12','13'], ans:2, ok:'✅ 96÷8=12！', no:'8×12=96，所以96÷8=12！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎵', text:'门票大人 <em>35</em> 元，儿童 <em>20</em> 元，买2大1小共几元？', opts:['80元','85元','90元','95元'], ans:2, ok:'🎵 35×2+20=90！', no:'2张大人票70元+儿童20元=90元！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🔢', text:'<em>9 × 7</em> = ？', opts:['59','61','63','65'], ans:2, ok:'✅ 9×7=63！', no:'9乘以7等于63！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📏', text:'正方形边长 <em>9</em> cm，周长是多少？', opts:['27cm','36cm','45cm','54cm'], ans:1, ok:'✅ 9×4=36cm！', no:'正方形周长=边长×4=9×4=36！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌙', text:'<em>63 ÷ 9</em> = ？', opts:['5','6','7','8'], ans:2, ok:'✅ 63÷9=7！', no:'9×7=63，所以63÷9=7！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🦅', text:'鸟类的特征是什么？', opts:['有四条腿','全身有羽毛和翅膀','生活在水里','用鳃呼吸'], ans:1, ok:'🦅 鸟类有羽毛和翅膀！', no:'鸟类特征：有羽毛、翅膀，用肺呼吸！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌋', text:'火山喷出的炽热液体叫什么？', opts:['岩石','岩浆（熔岩）','泥浆','矿物质'], ans:1, ok:'🌋 火山喷出的叫岩浆！', no:'火山喷出地表的高温液态岩石叫岩浆！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌿', text:'光合作用发生在植物的哪个部位？', opts:['根部','茎部','叶子','花朵'], ans:2, ok:'🌿 光合作用主要在叶子里！', no:'叶片中的叶绿体是光合作用的场所！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🦈', text:'鲨鱼属于哪一类动物？', opts:['哺乳类','爬行类','鱼类','两栖类'], ans:2, ok:'🦈 鲨鱼是鱼类，用鳃呼吸！', no:'鲨鱼是鱼类，用鳃呼吸！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌺', text:'花的哪个部分产生花粉？', opts:['花瓣','花萼','雄蕊','雌蕊'], ans:2, ok:'🌺 雄蕊产生花粉！', no:'花的雄蕊产生花粉！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌏', text:'南极洲是什么样的地方？', opts:['热带雨林','冰雪覆盖的大陆','沙漠地带','火山群岛'], ans:1, ok:'🧊 南极洲是被冰雪覆盖的大陆！', no:'南极洲是地球最南端，被厚厚冰层覆盖！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🐸', text:'青蛙的幼体叫什么？', opts:['幼虫','蝌蚪','小青蛙','蛹'], ans:1, ok:'🐸 青蛙的幼体叫蝌蚪！', no:'青蛙幼体是蝌蚪，蝌蚪长大变青蛙！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌞', text:'一年中白天最长的是哪个季节？', opts:['春季','夏季','秋季','冬季'], ans:1, ok:'☀️ 夏季白天最长！', no:'夏季地球倾斜，白天时间最长！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🦋', text:'昆虫身体分为几部分？', opts:['两部分','三部分','四部分','五部分'], ans:1, ok:'🦋 头、胸、腹三部分！', no:'昆虫身体分为头部、胸部和腹部！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌊', text:'潮汐是由什么引起的？', opts:['太阳引力','月球引力','地球自转','风力'], ans:1, ok:'🌊 潮汐主要由月球引力引起！', no:'潮汐主要是月球对海水的引力造成的！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌡️', text:'水在正常气压下，沸腾温度是多少？', opts:['80℃','90℃','100℃','110℃'], ans:2, ok:'🔥 水在100℃沸腾！', no:'水在标准大气压下100℃沸腾！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📖', text:'"人之初，性本善"出自哪部著作？', opts:['《百家姓》','《弟子规》','《三字经》','《千字文》'], ans:2, ok:'✅ 出自《三字经》！', no:'"人之初，性本善"是《三字经》的开篇！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'✏️', text:'"勤"的反义词是？', opts:['懒','慢','坏','弱'], ans:0, ok:'✅ "勤"的反义词是"懒"！', no:'勤和懒意思相反！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎭', text:'"画蛇添足"的意思是？', opts:['蛇很厉害','多此一举，弄巧成拙','画画技术好','蛇有脚'], ans:1, ok:'📚 多做了不必要的事，弄巧成拙！', no:'画蛇添足比喻做了多余的事，反而坏事！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌸', text:'"汪"字的偏旁是什么？', opts:['木字旁','三点水','口字旁','心字底'], ans:1, ok:'✅ "汪"字偏旁是三点水！', no:'"汪"字左边是三点水偏旁！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎵', text:'"春夜喜雨"是哪位诗人写的？', opts:['李白','杜甫','白居易','王维'], ans:1, ok:'✅ 《春夜喜雨》是杜甫写的！', no:'"好雨知时节"是杜甫的《春夜喜雨》！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📝', text:'"疑是地上霜"的意思是？', opts:['地上有霜','把月光比作地上白霜','天气很冷','地上结冰了'], ans:1, ok:'🌙 诗人把月光比作地上的白霜！', no:'月光明亮，诗人以为是地上的白霜，是比喻！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📕', text:'"亡羊补牢"的意思是？', opts:['羊死了很伤心','出了问题及时补救还不晚','羊圈坏了','养羊的故事'], ans:1, ok:'📚 出了问题及时补救，还为时不晚！', no:'亡羊补牢：及时补救！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🏆', text:'"坚韧不拔"的近义词是？', opts:['轻松愉快','坚持不懈','马马虎虎','随便应付'], ans:1, ok:'✅ "坚韧不拔"和"坚持不懈"意思相近！', no:'"坚韧不拔"意为坚定不移，近义词是"坚持不懈"！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌊', text:'"守株待兔"告诉我们什么？', opts:['要耐心等待','不能不劳而获','兔子很聪明','农民很厉害'], ans:1, ok:'📚 不能靠运气，要主动努力！', no:'守株待兔比喻不劳而获是不对的！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎨', text:'下面哪个词语是形容颜色的？', opts:['高兴','迅速','金黄','柔软'], ans:2, ok:'✅ "金黄"是描述颜色的词！', no:'"金黄"描述颜色！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'💡', text:'"三人行，必有我师"出自哪里？', opts:['《孟子》','《论语》','《大学》','《诗经》'], ans:1, ok:'✅ 出自《论语》！', no:'"三人行必有我师焉"出自孔子《论语》！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎭', text:'"一鸣惊人"的主人公是哪国君主？', opts:['秦国','楚国','齐国','燕国'], ans:1, ok:'✅ 楚庄王三年不鸣，一鸣惊人！', no:'"一鸣惊人"说的是楚庄王！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📖', text:'"不耻下问"的意思是？', opts:['不问问题','向他人请教不觉得羞耻','问了很多问题','下面的人不懂'], ans:1, ok:'✅ 虚心向他人学习，不觉得羞耻！', no:'"不耻下问"指虚心学习！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🤝', text:'你和朋友意见不一样，应该怎么做？', opts:['强迫朋友按你说的做','不跟他玩了','互相听对方的意见找共同点','让别人来决定'], ans:2, ok:'😊 互相尊重，共同找到解决方法！', no:'不同意见时要互相倾听，寻找共同点！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🌱', text:'你在学校被同学误解了，你会怎么做？', opts:['生气不理他','向他解释清楚','哭泣不上学','让老师处理一切'], ans:1, ok:'😊 冷静解释，消除误解最重要！', no:'被误解时要冷静解释清楚！' },
+    { type:'心态', typeCls:'creative', typeColor:'#fb923c', art:'🏅', text:'你帮助别人后，对方没有道谢，你会……', opts:['生气要求道谢','后悔帮了他','不介意，助人是快乐的事','以后再也不帮人'], ans:2, ok:'😊 助人为乐，不求回报才是真善良！', no:'帮助别人不求回报！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🦊', text:'<em>4 × 25</em> = ？', opts:['90','95','100','105'], ans:2, ok:'✅ 4×25=100！', no:'4乘以25等于100！' },
+    { type:'自然', typeCls:'science', typeColor:'#60a5fa', art:'🌸', text:'春天开花需要哪种条件？', opts:['低温','高温干燥','温暖湿润','强风'], ans:2, ok:'🌸 温暖湿润有利于开花！', no:'春天温暖潮湿，有利于植物开花！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'✍️', text:'"勤能补拙"的意思是？', opts:['动作勤快','勤奋努力可以弥补天赋不足','拙劣的作品','懒惰的结果'], ans:1, ok:'✅ 勤奋努力可以弥补天赋不足！', no:'"勤能补拙"指勤奋努力能弥补先天不足！' },
+  ],
+
+  // ── 关卡7-9：8-10岁（r6/r7/r8）综合难题 ──
+  lv3: [
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🔢', text:'<em>125 ÷ 5</em> = ？', opts:['20','25','30','35'], ans:1, ok:'✅ 125÷5=25，正确！', no:'125除以5，先算100÷5=20，再算25÷5=5，合计25！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📊', text:'小明存了 <em>128</em> 元，买了一本书花了 <em>39</em> 元，还剩多少？', opts:['79元','89元','99元','109元'], ans:1, ok:'💰 128-39=89，答对了！', no:'128减39：先减30得98，再减9得89！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌀', text:'一个正方形的周长是 <em>36</em> 厘米，它的边长是多少？', opts:['6cm','8cm','9cm','12cm'], ans:2, ok:'📐 36÷4=9，正确！', no:'正方形4条边相等，36÷4=9厘米！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'⚡', text:'电流从哪里流向哪里？', opts:['从负极到正极','从正极到负极','两个方向都行','不流动'], ans:1, ok:'⚡ 对！电流从正极流向负极！', no:'电流方向是从正极流向负极！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌍', text:'地球绕太阳转一圈需要多长时间？', opts:['1天','1个月','1年','10年'], ans:2, ok:'🌍 对！地球公转周期是365天，约1年！', no:'地球绕太阳一圈需要约365天，就是一年！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🧲', text:'磁铁同极相互……', opts:['吸引','排斥','没有反应','融合'], ans:1, ok:'🧲 对！同极相斥，异极相吸！', no:'磁铁同名磁极互相排斥，异名磁极互相吸引！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📜', text:'"欲穷千里目，更上一层楼"出自哪首诗？', opts:['《静夜思》','《登鹳雀楼》','《望庐山瀑布》','《春晓》'], ans:1, ok:'🏯 对！这是王之涣的《登鹳雀楼》！', no:'这句诗来自唐代王之涣的《登鹳雀楼》！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎭', text:'"掩耳盗铃"这个成语的意思是？', opts:['耳朵痒','自欺欺人，以为别人不知道','偷铃铛的故事','盗贼逃跑'], ans:1, ok:'📚 对！掩耳盗铃=自欺欺人！', no:'捂住自己耳朵去偷铃铛，以为别人听不见，比喻自欺欺人！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌊', text:'下列词语中，哪个是描写声音的词？', opts:['火红','柔软','哗哗','甜蜜'], ans:2, ok:'✅ 对！"哗哗"是描写水流声音的词！', no:'"哗哗"是模拟声音的拟声词！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🔬', text:'人体中最硬的组织是什么？', opts:['骨头','指甲','牙齿的牙釉质','头发'], ans:2, ok:'🦷 对！牙齿的牙釉质是人体最硬的组织！', no:'牙釉质（牙齿表面）是人体最坚硬的组织！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌿', text:'植物进行光合作用会释放出什么气体？', opts:['二氧化碳','氮气','氧气','水蒸气'], ans:2, ok:'🌱 对！光合作用释放氧气，我们才能呼吸！', no:'植物光合作用吸收二氧化碳，释放氧气！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎲', text:'一个长方形长 <em>8</em> 厘米，宽 <em>5</em> 厘米，面积是多少？', opts:['26cm²','35cm²','40cm²','45cm²'], ans:2, ok:'📐 8×5=40，正确！', no:'长方形面积=长×宽=8×5=40平方厘米！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🖊️', text:'下面哪个句子用了比喻手法？', opts:['小明跑得很快','天上的云像棉花糖','今天天气很好','她哭了很久'], ans:1, ok:'✅ 对！"像棉花糖"就是比喻！', no:'"像……"是比喻的标志，把云比喻成棉花糖！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'💧', text:'水的化学式是什么？', opts:['CO₂','H₂O','O₂','NaCl'], ans:1, ok:'💧 对！水的化学式是H₂O！', no:'水由2个氢原子和1个氧原子组成，化学式H₂O！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'⏱️', text:'2小时15分钟等于多少分钟？', opts:['115分钟','125分钟','135分钟','145分钟'], ans:2, ok:'⏰ 2×60+15=135，正确！', no:'2小时=120分钟，再加15分钟=135分钟！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🏮', text:'"春节"是中国哪个节日？', opts:['中秋节','元宵节','农历新年','端午节'], ans:2, ok:'🧧 对！春节就是中国的农历新年！', no:'春节是中国最重要的传统节日，即农历新年！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌙', text:'月亮本身会发光吗？', opts:['会，月亮自己发光','不会，反射太阳光','会，靠地球反光','不确定'], ans:1, ok:'🌙 对！月亮不发光，是反射太阳光！', no:'月亮本身不发光，我们看到的是它反射的太阳光！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📈', text:'小红跑步，第一圈 <em>3</em> 分钟，第二圈 <em>4</em> 分钟，第三圈 <em>5</em> 分钟，平均每圈几分钟？', opts:['3分钟','4分钟','5分钟','6分钟'], ans:1, ok:'✅ (3+4+5)÷3=4，正确！', no:'平均=(3+4+5)÷3=12÷3=4分钟！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📝', text:'"锲而不舍，金石可镂"这句话告诉我们什么道理？', opts:['金子和石头可以雕刻','只要坚持不放弃，什么都能做到','雕刻很难','需要好工具'], ans:1, ok:'💪 对！坚持不懈，就能克服一切困难！', no:'只要坚持不放弃，就算再硬的金石也能雕刻！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🔭', text:'太阳系中最大的行星是哪颗？', opts:['土星','火星','木星','天王星'], ans:2, ok:'🪐 对！木星是太阳系最大的行星！', no:'木星是太阳系体积和质量最大的行星！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📊', text:'数列：2, 4, 8, 16, ___，下一个是多少？', opts:['24','28','32','36'], ans:2, ok:'✅ 每次×2：16×2=32！', no:'这是等比数列，每项×2，所以是32！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎲', text:'一个数的 <em>3</em> 倍是 <em>72</em>，这个数是多少？', opts:['18','24','36','48'], ans:1, ok:'✅ 72÷3=24，答对！', no:'72÷3=24，所以这个数是24！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📐', text:'三角形三个内角之和等于多少度？', opts:['90°','120°','180°','360°'], ans:2, ok:'📐 对！三角形内角和=180°！', no:'任意三角形三个内角加起来都等于180度！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'💹', text:'语文 <em>92</em>，数学 <em>88</em>，英语 <em>96</em>，平均分是多少？', opts:['89分','90分','92分','94分'], ans:2, ok:'✅ (92+88+96)÷3=92，正确！', no:'(92+88+96)÷3=276÷3=92分！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🔢', text:'把 <em>3/4</em> 化成小数是多少？', opts:['0.6','0.7','0.75','0.8'], ans:2, ok:'✅ 3÷4=0.75，正确！', no:'3除以4等于0.75！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📏', text:'圆的周长公式是（r为半径）？', opts:['πr²','2πr','πr','4πr'], ans:1, ok:'⭕ 对！圆周长=2πr！', no:'圆的周长公式是C=2πr！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌀', text:'小数 <em>0.25</em> 化成分数是多少？', opts:['1/2','1/4','1/5','2/5'], ans:1, ok:'✅ 0.25=1/4，正确！', no:'0.25=25/100=1/4！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📈', text:'小红储蓄罐每天存 <em>5</em> 元，一个月（<em>30</em>天）能存多少？', opts:['120元','130元','140元','150元'], ans:3, ok:'💰 5×30=150，答对啦！', no:'每天5元，30天共5×30=150元！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎯', text:'一个数除以 <em>4</em> 商 <em>13</em> 余 <em>2</em>，这个数是多少？', opts:['50','52','54','56'], ans:2, ok:'✅ 13×4+2=54，正确！', no:'13×4=52，再加余数2，等于54！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🏗️', text:'长方体长 <em>5</em> cm，宽 <em>4</em> cm，高 <em>3</em> cm，体积是多少？', opts:['40cm³','50cm³','60cm³','70cm³'], ans:2, ok:'📦 5×4×3=60，正确！', no:'长方体体积=长×宽×高=5×4×3=60！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'⚗️', text:'下列哪种变化是化学变化？', opts:['水结成冰','纸张燃烧','铁块切割','玻璃破碎'], ans:1, ok:'🔥 对！纸张燃烧会产生新物质，是化学变化！', no:'燃烧会产生新物质（灰烬、二氧化碳），是化学变化！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🔭', text:'光在真空中的速度约为每秒多少千米？', opts:['10万km','30万km','100万km','300万km'], ans:1, ok:'💡 对！光速约30万km/s！', no:'光在真空中的速度约为30万千米每秒！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🧬', text:'人体最大的器官是哪个？', opts:['心脏','大脑','肝脏','皮肤'], ans:3, ok:'✅ 对！皮肤是人体最大的器官！', no:'皮肤覆盖整个身体，是人体最大的器官！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌿', text:'植物光合作用吸收什么气体，释放什么气体？', opts:['吸收O₂，释放CO₂','吸收CO₂，释放O₂','吸收N₂，释放H₂','吸收H₂，释放N₂'], ans:1, ok:'🌱 对！光合作用吸收CO₂，释放O₂！', no:'植物光合作用吸收二氧化碳，释放氧气！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🔋', text:'电池正极用什么符号表示？', opts:['−','×','÷','+'], ans:3, ok:'🔋 对！正极用"+"表示！', no:'电池正极用"+"表示，负极用"−"表示！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌍', text:'地球内部结构从外到内依次是？', opts:['地壳-地幔-地核','地核-地幔-地壳','地幔-地壳-地核','地壳-地核-地幔'], ans:0, ok:'🌍 对！从外到内：地壳→地幔→地核！', no:'地球从外到内分为：地壳、地幔、地核！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'💎', text:'钻石是由什么元素构成的？', opts:['硅','碳','铁','铝'], ans:1, ok:'💎 对！钻石是碳元素的晶体！', no:'钻石是碳元素在高温高压下形成的晶体！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌊', text:'声音在哪种介质中传播最快？', opts:['空气','水','金属（固体）','真空'], ans:2, ok:'🔊 对！声音在固体中传播最快！', no:'声音传播速度：固体>液体>气体，真空中不能传播！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'⚡', text:'闪电的本质是什么？', opts:['光','大气放电现象','热量','声音'], ans:1, ok:'⚡ 对！闪电是大气中的放电现象！', no:'闪电是云与云或云与地面之间的大气放电现象！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌌', text:'银河系大约有多少颗恒星？', opts:['几百颗','几万颗','几亿颗','几千亿颗'], ans:3, ok:'🌟 对！银河系有约1000-4000亿颗恒星！', no:'银河系约有1000-4000亿颗恒星，太阳只是其中之一！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📜', text:'"天下兴亡，匹夫有责"的意思是？', opts:['只有官员保家卫国','每个普通人都对国家兴衰有责任','天下只有一人负责','与我无关'], ans:1, ok:'✅ 对！每个人都有保家卫国的责任！', no:'匹夫指普通人，这句话说明每个人都有责任！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎭', text:'"破釜沉舟"出自哪段历史？', opts:['赤壁之战','巨鹿之战','长平之战','淝水之战'], ans:1, ok:'✅ 对！项羽破釜沉舟大败秦军于巨鹿！', no:'项羽在巨鹿之战中破釜沉舟，大败秦军！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌊', text:'"问渠那得清如许，为有源头活水来"表达了什么？', opts:['水很干净','读书要不断汲取新知识','河渠很美','泉水清澈'], ans:1, ok:'📚 对！要不断学习才能思想清新！', no:'这句诗比喻只有不断学习新知识，才能保持思维清新！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📝', text:'下列哪个是排比句？', opts:['她像花一样美丽','他跑得很快','春天来了，花开了，鸟唱了，风暖了','教室很安静'], ans:2, ok:'✅ 对！三个结构相似的句子构成排比！', no:'排比句有三个或以上结构相似的句子！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📖', text:'"不以物喜，不以己悲"出自哪篇古文？', opts:['《出师表》','《岳阳楼记》','《醉翁亭记》','《桃花源记》'], ans:1, ok:'✅ 对！出自范仲淹的《岳阳楼记》！', no:'"不以物喜，不以己悲"出自范仲淹《岳阳楼记》！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🏮', text:'"青出于蓝而胜于蓝"比喻什么？', opts:['蓝色比绿色好看','后人超过前人','提取颜料的方法','蓝色染料的来源'], ans:1, ok:'✅ 对！比喻后辈超越前辈！', no:'青从蓝草提取却比蓝更蓝，比喻学生超过老师！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌺', text:'"知己知彼，百战不殆"出自哪部著作？', opts:['《论语》','《孙子兵法》','《三国演义》','《史记》'], ans:1, ok:'✅ 对！出自孙武的《孙子兵法》！', no:'"知己知彼，百战不殆"出自孙武的《孙子兵法》！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'💡', text:'"纸上谈兵"的主人公是谁？', opts:['廉颇','赵括','蔺相如','白起'], ans:1, ok:'✅ 对！赵括只会"纸上谈兵"！', no:'赵括只会在纸上谈论兵法，实战惨败于长平！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎨', text:'"横眉冷对千夫指，俯首甘为孺子牛"是谁的名言？', opts:['毛泽东','鲁迅','郭沫若','巴金'], ans:1, ok:'✅ 对！这是鲁迅的名言！', no:'这是鲁迅的诗句，表达了他的人生态度！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌙', text:'"举头望明月，低头思故乡"表达了什么情感？', opts:['对月亮的喜爱','对远方家乡的思念','对旅行的期待','对大自然的赞美'], ans:1, ok:'🌙 对！这首诗表达了对故乡的深深思念！', no:'李白在异乡望月，表达了对故乡的思念之情！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📊', text:'<em>4/5 + 1/5</em> = ？', opts:['4/10','1','5/10','4/25'], ans:1, ok:'✅ 4/5+1/5=5/5=1！', no:'分母相同，分子相加：4+1=5，5/5=1！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📐', text:'平行四边形底 <em>10cm</em>，高 <em>6cm</em>，面积是多少？', opts:['48cm²','56cm²','60cm²','64cm²'], ans:2, ok:'📐 10×6=60cm²！', no:'平行四边形面积=底×高！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎲', text:'等差数列：3, 7, 11, 15, ___，下一个是？', opts:['17','18','19','20'], ans:2, ok:'✅ 每次+4：15+4=19！', no:'相邻两项差为4，15+4=19！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🔢', text:'最小的质数是多少？', opts:['0','1','2','3'], ans:2, ok:'✅ 2是最小的质数！', no:'质数只能被1和自身整除，最小是2！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📏', text:'等腰三角形两腰各 <em>7cm</em>，底边 <em>6cm</em>，周长是多少？', opts:['18cm','19cm','20cm','21cm'], ans:2, ok:'✅ 7+7+6=20cm！', no:'两腰14加底边6，共20cm！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'💹', text:'衣服打八折后售价 <em>160</em> 元，原价是多少？', opts:['180元','200元','220元','240元'], ans:1, ok:'✅ 160÷0.8=200元！', no:'八折即售价=原价×0.8，原价=160÷0.8=200！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎯', text:'圆的面积公式是（r为半径）？', opts:['2πr','πr','πr²','2πr²'], ans:2, ok:'⭕ 圆的面积=πr²！', no:'圆的面积公式S=πr²！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'⚡', text:'<em>2³ + 3²</em> = ？', opts:['13','15','17','19'], ans:2, ok:'✅ 2³=8，3²=9，8+9=17！', no:'2的3次方=8，3的2次方=9，8+9=17！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌀', text:'比例：<em>2:3 = ?:12</em>，问号是多少？', opts:['6','7','8','9'], ans:2, ok:'✅ 2/3=8/12，答案是8！', no:'2×12=3×?，24=3×?，?=8！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📈', text:'商品涨价 <em>20%</em> 后卖 <em>120</em> 元，原来是多少元？', opts:['90元','95元','100元','105元'], ans:2, ok:'✅ 120÷1.2=100元！', no:'涨价20%后=原价×1.2，原价=120÷1.2=100！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🔢', text:'<em>0.6 × 0.5</em> = ？', opts:['0.03','0.3','3','30'], ans:1, ok:'✅ 0.6×0.5=0.3！', no:'6×5=30，两位小数，结果0.3！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📈', text:'正方形周长是 <em>20cm</em>，它的面积是多少？', opts:['20cm²','25cm²','30cm²','36cm²'], ans:1, ok:'✅ 边长=20÷4=5，面积=5²=25！', no:'周长20÷4=边长5，面积=5×5=25！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌙', text:'小明两天看了全书 <em>1/4</em> 和 <em>1/3</em>，共看了几分之几？', opts:['7/12','9/12','11/12','2/7'], ans:0, ok:'✅ 1/4+1/3=3/12+4/12=7/12！', no:'通分：3/12+4/12=7/12！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🏆', text:'成绩：60,70,80,80,90，中位数是多少？', opts:['70','75','80','85'], ans:2, ok:'✅ 中间第3个数是80！', no:'5个数排列后中间值是80！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎪', text:'鸡兔共 <em>10</em> 只，共 <em>28</em> 条腿，有几只鸡几只兔？', opts:['鸡6兔4','鸡5兔5','鸡4兔6','鸡7兔3'], ans:0, ok:'✅ 鸡6兔4：6×2+4×4=28！', no:'设鸡x只：2x+4(10-x)=28，解得x=6！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'💡', text:'<em>1+2+3+…+10</em> = ？', opts:['45','50','55','60'], ans:2, ok:'✅ (1+10)×10÷2=55！', no:'等差数列求和=(首项+末项)×项数÷2=55！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🔭', text:'某班30人，语文平均分80，数学平均分85，两科总分之和是多少？', opts:['4900','4950','4970','4990'], ans:1, ok:'✅ 30×(80+85)=30×165=4950！', no:'每人两科165分，30人共4950分！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌺', text:'一根绳子长 <em>3.6</em> 米，剪成每段 <em>0.4</em> 米，能剪几段？', opts:['7段','8段','9段','10段'], ans:2, ok:'✅ 3.6÷0.4=9段！', no:'3.6除以0.4等于9段！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🎠', text:'<em>(-3) × (-5)</em> = ？', opts:['-15','-8','8','15'], ans:3, ok:'✅ 负负得正，(-3)×(-5)=15！', no:'负数×负数=正数，(-3)×(-5)=15！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'📦', text:'一个数的 <em>40%</em> 是 <em>60</em>，这个数是多少？', opts:['120','140','150','160'], ans:2, ok:'✅ 60÷0.4=150！', no:'60是这个数的40%，所以这个数=60÷0.4=150！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🧪', text:'酸碱中和反应的产物是什么？', opts:['酸','碱','盐和水','气体'], ans:2, ok:'⚗️ 酸碱中和生成盐和水！', no:'酸和碱反应，生成盐和水！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌌', text:'宇宙中最基本的天体是什么？', opts:['行星','卫星','恒星','彗星'], ans:2, ok:'🌟 恒星是宇宙中最基本的天体！', no:'恒星（如太阳）是最基本的天体！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'⚡', text:'导体和绝缘体的区别是什么？', opts:['大小不同','颜色不同','能否导电','重量不同'], ans:2, ok:'⚡ 能导电的叫导体，不能导电叫绝缘体！', no:'导体容易导电，绝缘体不导电！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌡️', text:'热量传递的方式有几种？', opts:['1种','2种','3种','4种'], ans:2, ok:'🌡️ 热传递有传导、对流、辐射三种！', no:'热传递三种方式：传导、对流、辐射！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🧬', text:'人体有多少对染色体？', opts:['20对','23对','26对','46对'], ans:1, ok:'🧬 人体细胞有23对（46条）染色体！', no:'人体细胞含23对染色体，共46条！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌍', text:'地球自转一圈需要多长时间？', opts:['6小时','12小时','24小时','48小时'], ans:2, ok:'🌍 地球自转周期约24小时！', no:'地球绕地轴自转一圈约需24小时！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'💡', text:'爱迪生发明了什么？', opts:['电话','蒸汽机','实用电灯泡','飞机'], ans:2, ok:'💡 爱迪生发明了实用的电灯泡！', no:'爱迪生于1879年发明了实用白炽灯泡！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🔬', text:'细胞学说是由谁提出的？', opts:['达尔文','施莱登和施旺','牛顿','爱因斯坦'], ans:1, ok:'🔬 施莱登和施旺提出了细胞学说！', no:'细胞学说由德国科学家施莱登和施旺提出！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'⚗️', text:'下列哪个是物理变化？', opts:['铁生锈','木头燃烧','冰融化成水','食物腐败'], ans:2, ok:'✅ 冰融化是物理变化！', no:'冰融化只是状态改变，没有产生新物质！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌿', text:'植物细胞和动物细胞的主要区别是什么？', opts:['大小不同','植物细胞有细胞壁和叶绿体','动物细胞没有细胞核','颜色不同'], ans:1, ok:'🌿 植物细胞有细胞壁和叶绿体！', no:'植物细胞特有细胞壁、叶绿体和液泡！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌙', text:'月球表面的"海"里有水吗？', opts:['有很多水','有少量水','完全没有水','不确定'], ans:2, ok:'🌙 月球"海"完全没有水！', no:'月球"海"是古代火山熔岩平原，没有水！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'⚛️', text:'原子由哪几部分组成？', opts:['质子和中子','质子、中子和电子','原子核和电子','只有质子'], ans:2, ok:'⚛️ 原子由原子核（质子+中子）和电子组成！', no:'原子由原子核和核外电子构成！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌍', text:'臭氧层的作用是什么？', opts:['提供氧气','吸收紫外线保护地球生物','保温','制造云雨'], ans:1, ok:'🌿 臭氧层吸收有害紫外线！', no:'臭氧层能吸收太阳辐射中大部分有害紫外线！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🩸', text:'人体血液的主要功能是什么？', opts:['调节体温','运输氧气和营养','保持姿势','消化食物'], ans:1, ok:'🩸 血液输送氧气和营养，带走废物！', no:'血液负责运输氧气、养分并带走废物！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📜', text:'"己所不欲，勿施于人"的意思是？', opts:['自己喜欢的不给别人','自己不想要的不强加给别人','不和别人分享','己之所欲要施于人'], ans:1, ok:'✅ 自己不愿意的，不要强加于别人！', no:'"己所不欲，勿施于人"是孔子仁爱思想！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎭', text:'"邯郸学步"比喻什么？', opts:['步伐很好看','模仿他人反而失去自己','走路很快','在邯郸城里散步'], ans:1, ok:'✅ 模仿别人反而失去自己！', no:'邯郸学步：一个人去学走路，反而忘了原来怎么走！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌊', text:'"老骥伏枥，志在千里"表达什么精神？', opts:['马很累了','年老但志向不减','骑马很好玩','马在吃草'], ans:1, ok:'💪 虽然年老，但雄心壮志不减！', no:'曹操借老马比喻自己虽老，仍志向远大！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🏮', text:'"明日复明日，明日何其多"告诫我们什么？', opts:['明天很多','不要拖延，今日事今日毕','要多计划未来','明天很重要'], ans:1, ok:'✅ 不要拖延，珍惜今天！', no:'这首诗告诫我们不要拖延，要珍惜时间！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📖', text:'"桃李不言，下自成蹊"比喻什么？', opts:['桃李树漂亮','为人正直自然赢得尊敬','桃子李子好吃','小路很窄'], ans:1, ok:'✅ 为人正直，自然赢得他人尊敬！', no:'德行感召人心，无需自夸！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'💡', text:'"悬梁刺股"中"股"的意思是？', opts:['股票','大腿','手臂','腰部'], ans:1, ok:'✅ "股"在古文中指大腿！', no:'古文"股"指大腿，刺股是刺大腿提神学习！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📝', text:'下列哪个句子用了拟人手法？', opts:['月亮圆圆的','小草弯弯腰，向风儿打招呼','花朵是红色的','雨水落在地上'], ans:1, ok:'✅ "打招呼"是人的行为，用在草上是拟人！', no:'把小草当人描写，这是拟人修辞手法！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🌸', text:'"春蚕到死丝方尽"中"丝"谐音哪个字？', opts:['死','思','似','寺'], ans:1, ok:'✅ "丝"谐音"思"，表达绵绵思念！', no:'"丝"谐音"思"，表达绵绵思念！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📚', text:'"塞翁失马，焉知非福"揭示什么哲理？', opts:['马丢了很可惜','好事坏事可以互相转化','要养好马','不要住在边疆'], ans:1, ok:'🌟 坏事在一定条件下可以变成好事！', no:'要辩证看问题，坏事可能变成好事！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎭', text:'"程门立雪"的主人公是谁？', opts:['孔子和颜回','杨时和程颐','孟子和荀子','韩愈和柳宗元'], ans:1, ok:'✅ 杨时在大雪中等候老师程颐！', no:'"程门立雪"讲的是杨时尊师重道！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'📝', text:'"风声雨声读书声，声声入耳"下一句是？', opts:['家事国事天下事，事事关心','春华秋实万年长','学而时习之','一寸光阴一寸金'], ans:0, ok:'✅ "家事国事天下事，事事关心"！', no:'这是明代顾宪成的名联！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🔮', text:'<em>(-8) + 5</em> = ？', opts:['-3','-2','3','13'], ans:0, ok:'✅ (-8)+5=-3！', no:'负数加正数，绝对值之差取较大者符号：-3！' },
+    { type:'数学', typeCls:'math', typeColor:'#f472b6', art:'🌟', text:'一个等边三角形周长 <em>24cm</em>，边长是多少？', opts:['6cm','7cm','8cm','9cm'], ans:2, ok:'✅ 24÷3=8cm！', no:'等边三角形三边相等，24÷3=8cm！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🌊', text:'海浪的能量主要来自什么？', opts:['月亮引力','风力','地球自转','水温变化'], ans:1, ok:'🌊 海浪主要由风力驱动！', no:'大多数海浪是由风吹过海面产生的！' },
+    { type:'科学', typeCls:'science', typeColor:'#60a5fa', art:'🔋', text:'可充电电池充放电的原理是什么？', opts:['化学能和热能','化学能和电能互相转化','光能和电能','核能和电能'], ans:1, ok:'🔋 化学能和电能互相转化！', no:'放电时化学能→电能，充电时电能→化学能！' },
+    { type:'语文', typeCls:'lang', typeColor:'#34d399', art:'🎨', text:'"敝帚自珍"中"敝"的意思是？', opts:['好的','破旧的','漂亮的','新的'], ans:1, ok:'✅ "敝"是破旧的意思！', no:'"敝"意为破旧，整体意思是珍视自己的东西！' },
+  ],
+
   r9: [ // Hell tower - mixed hardest
     { type:'数学', typeCls:'math', typeColor:'#f472b6',
       art:'🏰', text:'地狱之塔有 <em>9</em> 层，每层有 <em>12</em> 个房间，\n一共有多少个房间？',
@@ -2656,6 +3030,9 @@ const STATE = {
   unlockedWeapons: ['sword'],
   unlockedGems: ['crystal'],
   speechState: 'idle', // for tracking princess speech context
+  usedQuestions: {}, // { bankKey: Set of used question indices } — reset when hell tower beaten
+  newBagCount: 0,
+  newCardUpgrade: false,
 };
 
 function saveState() {
@@ -2666,6 +3043,18 @@ function loadState() {
     const s = localStorage.getItem('crystalKingdom_v1');
     if (s) Object.assign(STATE, JSON.parse(s));
   } catch(e) {}
+}
+function resetGame() {
+  localStorage.removeItem('crystalKingdom_v1');
+  Object.assign(STATE, {
+    currentSkin:'princess', currentWeapon:'sword', currentGem:'crystal',
+    bag:[], cards:{}, realmProgress:{},
+    unlockedSkins:['princess'], unlockedWeapons:['sword'], unlockedGems:['crystal'],
+    speechState:'idle', usedQuestions:{}, newBagCount:0, newCardUpgrade:false,
+  });
+  showScreen('main');
+  renderMain();
+  showToast('🔄 游戏已重置，重新开始冒险！');
 }
 
 /* ============================================================
@@ -2731,7 +3120,12 @@ function showScreen(name) {
    HALF-SHEET (bag / cards)
 ============================================================ */
 function openHalfSheet(type) {
-  if (type === 'bag') { renderBag(); document.getElementById('half-bag').classList.add('show'); }
+  if (type === 'bag') {
+    renderBag(); document.getElementById('half-bag').classList.add('show');
+    STATE.newBagCount = 0;
+    const _bb = document.getElementById('bag-badge');
+    if (_bb) { _bb.textContent=''; _bb.classList.remove('show'); }
+  }
   if (type === 'cards') { renderCards(); document.getElementById('half-cards').classList.add('show'); }
 }
 function closeHalfSheet(type, e) {
@@ -2895,7 +3289,14 @@ function startIdleSpeech() {
 
 function renderMain() {
   const skin = SKINS.find(s => s.id === STATE.currentSkin) || SKINS[0];
-  const weapon = WEAPONS.find(w => w.id === STATE.currentWeapon) || WEAPONS[0];
+  // 武器可以是EQUIPMENT中的道具，也可以是默认剑
+  let weapon;
+  const eqAsWeapon = EQUIPMENT.find(e => e.id === STATE.currentWeapon);
+  if (eqAsWeapon) {
+    weapon = { icon: eqAsWeapon.icon, name: eqAsWeapon.name };
+  } else {
+    weapon = WEAPONS.find(w => w.id === STATE.currentWeapon) || WEAPONS[0];
+  }
   const gem = GEMS.find(g => g.id === STATE.currentGem) || GEMS[0];
 
   // Apply skin colors to SVG elements
@@ -2924,12 +3325,12 @@ function renderMain() {
   document.getElementById('equipped-gem-name').textContent = gem.name;
   // badges
   const bagBadge = document.getElementById('bag-badge');
-  bagBadge.textContent = STATE.bag.length;
-  bagBadge.classList.toggle('show', STATE.bag.length > 0);
+  bagBadge.textContent = STATE.newBagCount > 0 ? 'N' : '';
+  bagBadge.classList.toggle('show', STATE.newBagCount > 0);
   const cardBadge = document.getElementById('card-badge');
-  const totalCards = Object.keys(STATE.cards).length;
-  cardBadge.textContent = totalCards;
-  cardBadge.classList.toggle('show', totalCards > 0);
+  const hasUpgradable = Object.entries(STATE.cards).some(([,d]) => d?.count > 1);
+  cardBadge.textContent = '↑';
+  cardBadge.classList.toggle('show', hasUpgradable);
   startIdleSpeech();
 }
 
@@ -2937,6 +3338,42 @@ function renderMain() {
    PICKER MODAL
 ============================================================ */
 let pickerType = null;
+function showWeaponLocked() {
+  // 武器就是背包里的道具，弹出背包道具选择器
+  if (STATE.bag.length === 0) {
+    showToast('背包是空的！先去秘境冒险获得道具吧～');
+    return;
+  }
+  openBagWeaponPicker();
+}
+
+function openBagWeaponPicker() {
+  const overlay = document.getElementById('picker-modal');
+  document.getElementById('picker-title').textContent = '⚔️ 选择手持武器';
+  const grid = document.getElementById('picker-grid');
+  grid.innerHTML = '';
+
+  // 始终可选"空手"（默认初始剑）
+  const defaultItem = { id:'__default', icon:'⚔️', name:'水晶剑', story:'初始武器' };
+  const allItems = [defaultItem, ...STATE.bag.map(id => EQUIPMENT.find(e => e.id === id)).filter(Boolean)];
+
+  allItems.forEach(eq => {
+    const isSelected = STATE.currentWeapon === eq.id;
+    const div = document.createElement('div');
+    div.className = 'picker-item' + (isSelected ? ' selected' : '');
+    div.innerHTML = `<span class="pi-icon">${eq.icon}</span><div class="pi-name">${eq.name}</div>`;
+    div.onclick = () => {
+      STATE.currentWeapon = eq.id;
+      saveState();
+      renderMain();
+      overlay.classList.remove('show');
+    };
+    grid.appendChild(div);
+  });
+
+  overlay.classList.add('show');
+}
+
 function openPicker(type) {
   pickerType = type;
   const modal = document.getElementById('picker-modal');
@@ -3070,7 +3507,7 @@ function renderCards() {
       <div class="card-name" style="color:${card.color}">${hasCard ? lvName : '???'}</div>
       <div class="card-lvl">Lv.${level + 1} &nbsp; ${hasCard ? `×${count}` : ''}</div>
       <div class="card-stars">${stars}</div>
-      ${hasCard ? `<div style="font-size:11px;color:rgba(255,255,255,0.45);margin:4px 0;position:relative;z-index:1">ATK:${stat.atk} DEF:${stat.def}</div>` : ''}
+      ${hasCard ? `<div style="font-size:22px;color:rgba(255,255,255,0.45);margin:4px 0;position:relative;z-index:1">ATK:${stat.atk} DEF:${stat.def}</div>` : ''}
       ${hasCard ? `<button class="upgrade-btn" onclick="upgradeCard('${card.id}',event)" ${!canUpgrade ? 'disabled' : ''}>
         ${canUpgrade ? `⬆️ 升级 (${count} 张)` : `升级需要重复收集`}
       </button>` : ''}
@@ -3097,6 +3534,9 @@ function upgradeCard(cardId, e) {
   saveState();
   renderCards();
   showToast(`✨ ${card.name} 升到 Lv.${cs.level + 1}！`);
+  const _stillUp = Object.entries(STATE.cards).some(([,d]) => d?.count > 1);
+  const _cb = document.getElementById('card-badge');
+  if (_cb) _cb.classList.toggle('show', _stillUp);
 }
 
 function showCardDetail(card, level, stat) {
@@ -3159,8 +3599,8 @@ function renderAdventure() {
       div.innerHTML = `
         <div class="realm-blob realm-blob-boss" style="background:${realm.grad};border-radius:20px">
           <div class="realm-hell-tag">👑 最终决战</div>
-          <div class="realm-card-monster" style="font-size:72px">${monster}</div>
-          <div class="realm-card-name" style="font-size:22px">${realm.name}</div>
+          <div class="realm-card-monster" style="font-size:144px">${monster}</div>
+          <div class="realm-card-name" style="font-size:44px">${realm.name}</div>
           ${locked
             ? `<div class="realm-lock-overlay">🔒</div>`
             : beaten
@@ -3185,17 +3625,18 @@ function renderAdventure() {
           ${locked
             ? `<div class="realm-row-action realm-lock-inline">🔒</div>`
             : beaten
-              ? `<div class="realm-beaten-row">
-                  <span style="font-size:20px">✅</span>
-                  <button class="realm-challenge-btn realm-rechallenge-btn" style="position:relative;transform:none;bottom:auto;left:auto;font-size:12px;padding:5px 14px" onclick="event.stopPropagation();startRealm(window._REALMS[${i}])">🔄 再战</button>
-                 </div>`
-              : `<button class="realm-challenge-btn" style="position:relative;transform:none;bottom:auto;left:auto;font-size:12px;padding:5px 14px" onclick="event.stopPropagation();startRealm(window._REALMS[${i}])">⚔️ 挑战</button>`
+              ? `<div class="realm-beaten-row"><span style="font-size:40px">✅</span></div>`
+              : `<button class="realm-challenge-btn" style="position:relative;transform:none;bottom:auto;left:auto;font-size:24px;padding:5px 14px" onclick="event.stopPropagation();startRealm(window._REALMS[${i}])">⚔️ 挑战</button>`
           }
         </div>
       `;
     }
 
-    if (!locked) {
+    if (locked) {
+      div.onclick = () => showToast('🔒 需要完成上一个秘境的挑战哦～');
+    } else if (beaten && !realm.isHell) {
+      div.onclick = () => showToast('✅ 已通关！完成地狱之塔后可重置所有关卡～');
+    } else {
       div.onclick = () => startRealm(realm);
     }
     grid.appendChild(div);
@@ -3232,20 +3673,24 @@ let BATTLE = {
 function startBattle() {
   const boss = BOSS_CARDS.find(b => b.id === 'b10');
 
-  // 计算公主当前总战力
+  // 计算公主当前总战力：装备atk全部累加到基础攻击
   let atk = 25, def = 15;
   STATE.bag.forEach(id => {
     const eq = EQUIPMENT.find(e => e.id === id);
-    if (eq) { atk += eq.atk; def += eq.def; }
+    if (eq) {
+      atk += eq.atk; // 装备atk(25-40)直接累加到基础攻击
+      def += eq.def;
+    }
   });
   // 每持有卡牌给少量加成
-  Object.values(STATE.cards).forEach(d => { if (d?.count > 0) { atk += 5; def += 3; } });
+  Object.values(STATE.cards).forEach(d => { if (d?.count > 0) { atk += 3; def += 3; } });
 
   BATTLE.baseAtk = atk;
   BATTLE.baseDef = def;
 
   // Boss HP 按公主战力缩放（保证有挑战性）
-  const bossHp  = Math.round((atk + def) * 4.2 + 200);
+  // BOSS血量确保玩家至少需答对8题：最大单次伤害=atk*1.25，8次=atk*10
+  const bossHp  = Math.round(atk * 10 + def * 3 + 300);
   const prinHp  = Math.round(def * 3 + 100);
 
   Object.assign(BATTLE, {
@@ -3259,6 +3704,10 @@ function startBattle() {
   document.getElementById('battle-boss-icon').textContent = boss.icon;
   document.getElementById('battle-boss-icon').className   = 'battle-boss-icon';
   document.getElementById('battle-boss-name').textContent = boss.name;
+  // 公主形象用当前外观的emoji代替
+  const skinIcons = { princess:'👸', elf:'🧝‍♀️', witch:'🧙‍♀️', angel:'👼', shadow:'🥷', dragon:'🐲' };
+  const prinIcon = skinIcons[STATE.currentSkin] || '👸';
+  document.getElementById('battle-princess-icon').textContent = prinIcon;
   battleUpdateHP();
   battleSetLog('战斗开始！👹 地狱三角犬发出可怕的吼叫……选择攻击方式，拯救独角兽！🦄');
   battleSetTurn('player');
@@ -3305,7 +3754,7 @@ function battleSetLog(msg, color) {
   el.style.color = color || 'rgba(255,255,255,0.88)';
 }
 
-/* ─── 渲染行动按钮 ─── */
+/* ─── 渲染行动按钮：只有基础攻击 + 宝石攻击 ─── */
 function battleRenderActions() {
   const container = document.getElementById('battle-actions');
   container.innerHTML = '';
@@ -3313,69 +3762,47 @@ function battleRenderActions() {
   const title = document.getElementById('battle-section-title');
 
   if (BATTLE.turn === 'over') { title.textContent = ''; return; }
-  if (!isPlayerTurn) { title.textContent = 'BOSS 正在行动…'; }
-  else title.textContent = '── 选择攻击方式 ──';
+  if (!isPlayerTurn) { title.textContent = 'BOSS 正在行动…'; return; }
+  title.textContent = '── 选择攻击方式 ──';
 
-  // ① 武器普攻（无限次）
-  const weapon = WEAPONS.find(w => w.id === STATE.currentWeapon) || WEAPONS[0];
+  // ① 基础攻击（武器，无限次）
+  let weapon;
+  const eqAsWeapon = EQUIPMENT.find(e => e.id === STATE.currentWeapon);
+  if (eqAsWeapon) {
+    weapon = { icon: eqAsWeapon.icon, name: eqAsWeapon.name };
+  } else {
+    weapon = WEAPONS.find(w => w.id === STATE.currentWeapon) || WEAPONS[0];
+  }
   const wMin = Math.round(BATTLE.baseAtk * 0.75);
   const wMax = Math.round(BATTLE.baseAtk * 1.25);
   makeBattleBtn(container, {
     type:'weapon', icon:weapon.icon,
-    name:`${weapon.name} 攻击`,
-    desc:`基础攻击 · 可反复使用`,
+    name:`${weapon.name} 基础攻击`,
+    desc:`普通攻击 · 可反复使用`,
     power:`${wMin}~${wMax}`,
-    usable: isPlayerTurn,
+    usable: true,
     onClick:() => battleAskQuestion('weapon', weapon.name, BATTLE.baseAtk, 0.75, 1.25),
   });
 
-  // ② 宝石魔法爆发（一次性）
-  const gem = GEMS.find(g => g.id === STATE.currentGem) || GEMS[0];
-  const gemPow = Math.round(BATTLE.baseAtk * 2.0);
-  makeBattleBtn(container, {
-    type:'gem', icon:gem.icon,
-    name:`${gem.name} · 魔法爆发`,
-    desc: BATTLE.usedActions.has('gem') ? '本场已使用' : `超级魔法 · 仅限一次`,
-    power: BATTLE.usedActions.has('gem') ? '已用' : `${gemPow}`,
-    usable: isPlayerTurn && !BATTLE.usedActions.has('gem'),
-    onClick:() => battleAskQuestion('gem', `${gem.name}魔法`, gemPow, 0.9, 1.1),
-  });
+  // ② 宝石攻击——背包里有几个宝石就能用几个（每个一次，伤害高于基础攻击）
+  // 收集背包中所有宝石类道具（type包含'宝石'或gemItem标记）
+  // 直接用所有 GEMS 中已解锁且在背包或默认拥有的
+  const gemMultiplier = 2.2; // 宝石攻击系数高于基础攻击
+  const gemBaseDmg = Math.round(BATTLE.baseAtk * gemMultiplier);
 
-  // ③ BOSS 卡牌（每张一次）
-  const hasCards = Object.entries(STATE.cards).some(([,d]) => d?.count > 0);
-  if (hasCards) {
-    Object.entries(STATE.cards).forEach(([bossId, data]) => {
-      if (!data?.count) return;
-      const card = BOSS_CARDS.find(b => b.id === bossId);
-      if (!card) return;
-      const lv = data.level || 1;
-      const basePow = (card.stats?.[lv-1]?.atk || 80) * 0.55 + BATTLE.baseAtk * 0.3;
-      const pow = Math.round(basePow);
-      const key = `card_${bossId}`;
-      makeBattleBtn(container, {
-        type:'card', icon:card.icon,
-        name:`${card.name} · Lv${lv}`,
-        desc: BATTLE.usedActions.has(key) ? '本场已使用' : `卡牌召唤 · 仅限一次`,
-        power: BATTLE.usedActions.has(key) ? '已用' : `${pow}`,
-        usable: isPlayerTurn && !BATTLE.usedActions.has(key),
-        onClick:() => battleAskQuestion(key, card.name, pow, 0.85, 1.15),
-      });
-    });
-  }
-
-  // ④ 道具（每件一次）
-  STATE.bag.forEach(eqId => {
-    const eq = EQUIPMENT.find(e => e.id === eqId);
-    if (!eq) return;
-    const pow = Math.round(eq.atk * 1.2 + eq.def * 0.4);
-    const key = `item_${eqId}`;
+  // 找玩家当前拥有的宝石数量（STATE.unlockedGems）
+  GEMS.forEach(gem => {
+    if (!STATE.unlockedGems.includes(gem.id)) return; // 未解锁不显示
+    const key = `gem_${gem.id}`;
+    const used = BATTLE.usedActions.has(key);
+    const pow = Math.round(BATTLE.baseAtk * gemMultiplier * (gem.id === 'diamond' ? 1.3 : gem.id === 'crystal' ? 1.0 : 1.15));
     makeBattleBtn(container, {
-      type:'item', icon:eq.icon,
-      name:eq.name,
-      desc: BATTLE.usedActions.has(key) ? '本场已使用' : `道具使用 · 仅限一次`,
-      power: BATTLE.usedActions.has(key) ? '已用' : `${pow}`,
-      usable: isPlayerTurn && !BATTLE.usedActions.has(key),
-      onClick:() => battleAskQuestion(key, eq.name, pow, 0.85, 1.15),
+      type:'gem', icon:gem.icon,
+      name:`${gem.name} · 魔法爆发`,
+      desc: used ? '本场已使用' : `宝石魔法 · 仅限一次 · 高伤害`,
+      power: used ? '已用' : `${pow}`,
+      usable: !used,
+      onClick:() => battleAskQuestion(key, `${gem.name}魔法`, pow, 0.9, 1.1),
     });
   });
 }
@@ -3425,7 +3852,7 @@ function battleAskQuestion(actionKey, actionName, baseDmg, minMult, maxMult) {
   q.opts.forEach((opt, i) => {
     const btn = document.createElement('button');
     btn.style.cssText = `width:100%;padding:9px 12px;text-align:left;border-radius:12px;
-      border:2.5px solid var(--outline);background:#fff9fe;font-size:13px;
+      border:2.5px solid var(--outline);background:#fff9fe;font-size:26px;
       display:flex;align-items:center;gap:8px;cursor:pointer;`;
     btn.innerHTML = `<span style="font-weight:900;color:var(--c-purple);width:16px">${prefixes[i]}</span>${opt}`;
     btn.onclick = () => handleBattleAnswer(q, i, btn);
@@ -3629,12 +4056,36 @@ function startRealm(realm) {
 }
 
 function buildQuestions(realm) {
-  // r9 地狱之塔用专属题库，其余秘境从100道通用题库随机抽取
-  const bank = realm.id === 'r9'
-    ? QUESTION_BANKS.r9
-    : QUESTION_BANKS.general;
-  const shuffled = [...bank].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, realm.questionCount);
+  let bank, bankKey;
+  if (realm.id === 'r9') {
+    bank = QUESTION_BANKS.r9; bankKey = 'r9';
+  } else if (['r0','r1','r2'].includes(realm.id)) {
+    bank = QUESTION_BANKS.lv1; bankKey = 'lv1';
+  } else if (['r3','r4','r5'].includes(realm.id)) {
+    bank = QUESTION_BANKS.lv2; bankKey = 'lv2';
+  } else if (['r6','r7','r8'].includes(realm.id)) {
+    bank = QUESTION_BANKS.lv3; bankKey = 'lv3';
+  } else {
+    bank = QUESTION_BANKS.general; bankKey = 'general';
+  }
+
+  // 跨关卡去重：记录已用过的题目索引
+  if (!STATE.usedQuestions[bankKey]) STATE.usedQuestions[bankKey] = [];
+  const used = STATE.usedQuestions[bankKey];
+
+  // 若剩余未用题目不够本关需要数量，重置已用记录
+  const available = bank.map((_,i) => i).filter(i => !used.includes(i));
+  const needed = realm.questionCount;
+  const pool = available.length >= needed ? available : bank.map((_,i) => i); // 重置
+
+  // 随机抽取
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  const picked = shuffled.slice(0, needed);
+
+  // 记录已用
+  picked.forEach(i => { if (!used.includes(i)) used.push(i); });
+
+  return picked.map(i => bank[i]);
 }
 
 function renderChallengeQ() {
@@ -3791,9 +4242,12 @@ function showWinResult() {
   const rewardCard = giveBossCard(realm.bossId);
   // Unlock skin for hell tower
   if (realm.isHell) {
-    if (!STATE.unlockedSkins.includes('dark')) STATE.unlockedSkins.push('dark');
-    // Reset all realms for replay
-    // (don't reset — player can keep going)
+    const lockedSkins = SKINS.filter(s => !STATE.unlockedSkins.includes(s.id));
+    if (lockedSkins.length > 0) {
+      const pickedSkin = lockedSkins[Math.floor(Math.random() * lockedSkins.length)];
+      STATE.unlockedSkins.push(pickedSkin.id);
+      CHALLENGE._unlockedSkinName = pickedSkin.name;
+    }
   }
   // Unlock weapon/skin bonuses
   unlockBonuses(realm);
@@ -3807,7 +4261,7 @@ function showWinResult() {
     <span class="result-emoji">${realm.isHell ? '🦄' : '🏆'}</span>
     <div class="result-title win">${realm.isHell ? '✨ 拯救成功！' : '🎉 秘境攻克！'}</div>
     <div class="result-desc">${realm.isHell
-      ? '你击败了地狱三角犬！独角兽自由啦！✨🦄\n新皮肤"暗夜女侠"已解锁！'
+      ? ('你击败了地狱三角犬！独角兽自由啦！✨🦄' + (CHALLENGE._unlockedSkinName ? '\n新外观【' + CHALLENGE._unlockedSkinName + '】已解锁！' : ''))
       : `你击败了${bossCard?.name || 'BOSS'}，打通了【${realm.name}】！`
     }</div>
     <div class="result-rewards">
@@ -3843,9 +4297,10 @@ function closeResult(win) {
   if (win) {
     showScreen('adventure');
     setPrincessSpeech('win');
-    // If hell tower beaten, reset all progress for replay
+    // If hell tower beaten, reset all progress and used questions for replay
     if (CHALLENGE.realm?.isHell) {
       Object.keys(STATE.realmProgress).forEach(k => delete STATE.realmProgress[k]);
+      STATE.usedQuestions = {}; // 重置题目使用记录，下一轮不重复
       saveState();
       showToast('🎊 全部秘境已重置，可以重新挑战！');
     }
@@ -3871,10 +4326,12 @@ function doQuit() {
    REWARD LOGIC
 ============================================================ */
 function giveEquipment() {
+  if (Math.random() > 0.50) return null; // 50%概率掉落
   const missing = EQUIPMENT.filter(e => !STATE.bag.includes(e.id));
   if (missing.length === 0) return null;
   const pick = missing[Math.floor(Math.random() * missing.length)];
   STATE.bag.push(pick.id);
+  STATE.newBagCount = (STATE.newBagCount || 0) + 1;
   return pick.id;
 }
 
@@ -3895,7 +4352,7 @@ function unlockBonuses(realm) {
     r6: null,
     r7: null,
     r8: { skin: 'mage' },
-    r9: { skin: 'dark', gem: 'diamond' },
+    r9: { gem: 'diamond' }, // 皮肤改为随机解锁
   };
   const bonus = bonusMap[realm.id];
   if (!bonus) return;
@@ -3957,7 +4414,9 @@ function showToast(msg) {
    INIT
 ============================================================ */
 window.onload = function() {
-  loadState();
+  // 需求4：清除旧存档，重置为全新状态
+  localStorage.removeItem('crystalKingdom_v1');
+  // loadState(); // 不加载旧存档
 };
 </script>
 </div><!-- .phone-screen -->
